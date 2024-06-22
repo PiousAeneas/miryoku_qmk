@@ -52,7 +52,8 @@ void u_td_mac_fn(tap_dance_state_t *state, void *user_data) {
 void u_td_win_fn(tap_dance_state_t *state, void *user_data) {
   if (state->count == 2) {
     isMac = false; // Set Mac Mode to false
-    process_magic(CG_NORM); // Unswap Control and GUI on both sides
+    keymap_config.swap_lctl_lgui = false; // Unswap Left Control and GUI
+    keymap_config.swap_rctl_rgui = false; // Unswap Right Control and GUI
   }
 }
 
