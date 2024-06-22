@@ -40,14 +40,14 @@ MIRYOKU_LAYER_LIST
 // Added function to send CG_TOGG on double tap
 void td_cg_togg_fn(tap_dance_state_t *state, void *user_data) {
   if (state->count == 2) {
-    tap_code16(CG_TOGG);
+    tap_code16(QK_MAGIC_TOGGLE_CTL_GUI);
   }
 }
 
 // Added function to send CG_NORM on double tap
 void td_cg_norm_fn(tap_dance_state_t *state, void *user_data) {
   if (state->count == 2) {
-    tap_code16(CG_NORM);
+    tap_code16(QK_MAGIC_UNSWAP_CTL_GUI);
   }
 }
 
