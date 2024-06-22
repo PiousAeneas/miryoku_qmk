@@ -43,7 +43,8 @@ MIRYOKU_LAYER_LIST
 void u_td_mac_fn(tap_dance_state_t *state, void *user_data) {
   if (state->count == 2) {
     isMac = true;  // Set Mac Mode to true
-    process_magic(CG_TOGG); // Swap Control and GUI on both sides
+    keymap_config.swap_lctl_lgui = true; // Swap Left Control and GUI
+    keymap_config.swap_rctl_rgui = true; // Swap Right Control and GUI
   }
 }
 
