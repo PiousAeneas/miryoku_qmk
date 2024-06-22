@@ -40,7 +40,8 @@ MIRYOKU_LAYER_LIST
 // Added function to send CG_TOGG on double tap
 void td_cg_togg_fn(tap_dance_state_t *state, void *user_data) {
   if (state->count == 2) {
-    tap_code16(QK_MAGIC_TOGGLE_CTL_GUI);
+    tap_code16(KC_T);
+    isMac = true;  // Set Mac mode to true
   }
 }
 
@@ -48,6 +49,7 @@ void td_cg_togg_fn(tap_dance_state_t *state, void *user_data) {
 void td_cg_norm_fn(tap_dance_state_t *state, void *user_data) {
   if (state->count == 2) {
     tap_code16(QK_MAGIC_UNSWAP_CTL_GUI);
+    isMac = false; // Set Mac mode to false
   }
 }
 
