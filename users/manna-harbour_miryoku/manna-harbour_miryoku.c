@@ -7,7 +7,7 @@
 
 #include "manna-harbour_miryoku.h"
 
-// Boolean to track if Mac mode is active
+// Boolean to track if Mac Mode is active
 bool isMac = false; 
 
 // Additional Features double tap guard
@@ -18,9 +18,9 @@ enum {
 MIRYOKU_LAYER_LIST
 #undef MIRYOKU_X
 
-    // Added new enum members for tap dances
-    U_TD_CG_TOGG,
-    U_TD_CG_NORM,
+    // Add new enum members for tap dances to toggle Mac Mode
+    U_TD_MAC,
+    U_TD_WIN,
 
 };
 
@@ -39,19 +39,19 @@ void u_td_fn_U_##LAYER(tap_dance_state_t *state, void *user_data) { \
 MIRYOKU_LAYER_LIST
 #undef MIRYOKU_X
 
-// Added function to send CG_TOGG and turn on Mac mode on double tap
-void u_td_cg_togg_fn(tap_dance_state_t *state, void *user_data) {
+// Add function to turn on Mac Mode after double tap
+void u_td_mac_fn(tap_dance_state_t *state, void *user_data) {
   if (state->count == 2) {
-    tap_code16(CG_TOGG);
-    isMac = true;  // Set Mac mode to true
+    isMac = true;  // Set Mac Mode to true
+    process_magic(CG_TOGG); // Swap Control and GUI on both sides
   }
 }
 
-// Added function to send CG_NORM and turn off Mac mode on double tap
-void u_td_cg_norm_fn(tap_dance_state_t *state, void *user_data) {
+// Add function to turn off Mac Mode after double tap tap
+void u_td_win_fn(tap_dance_state_t *state, void *user_data) {
   if (state->count == 2) {
-    tap_code16(CG_NORM);
-    isMac = false; // Set Mac mode to false
+    isMac = false; // Set Mac Mode to false
+    process_magic(CG_NORM); // Unswap Control and GUI on both sides
   }
 }
 
@@ -61,9 +61,9 @@ tap_dance_action_t tap_dance_actions[] = {
 MIRYOKU_LAYER_LIST
 #undef MIRYOKU_X
 
-    // Added CG_TOGG and CG_NORM tap dance actions
-    [U_TD_CG_TOGG] = ACTION_TAP_DANCE_FN(u_td_cg_togg_fn),
-    [U_TD_CG_NORM] = ACTION_TAP_DANCE_FN(u_td_cg_norm_fn),
+    // Add Mac Mode tap dance actions
+    [U_TD_MAC] = ACTION_TAP_DANCE_FN(u_td_mac_fn),
+    [U_TD_WIN] = ACTION_TAP_DANCE_FN(u_td_win_fn),
 
 };
 
