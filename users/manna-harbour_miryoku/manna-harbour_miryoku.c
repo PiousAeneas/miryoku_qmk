@@ -7,7 +7,7 @@
 
 #include "manna-harbour_miryoku.h"
 
-// Boolean to track if Mac mode is active (defaults to false/0)
+// Boolean to track if Mac mode is active
 bool isMac = false; 
 
 // Additional Features double tap guard
@@ -50,7 +50,7 @@ void td_cg_togg_fn(tap_dance_state_t *state, void *user_data) {
 // Added function to send CG_NORM on double tap
 void td_cg_norm_fn(tap_dance_state_t *state, void *user_data) {
   if (state->count == 2) {
-    tap_code16(QK_MAGIC_UNSWAP_CTL_GUI);
+    tap_code(KC_F);
     isMac = false; // Set Mac mode to false
   }
 }
