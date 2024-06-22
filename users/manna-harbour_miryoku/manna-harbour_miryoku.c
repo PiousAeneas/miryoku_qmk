@@ -67,6 +67,24 @@ void u_td_win_fn(tap_dance_state_t *state, void *user_data) {
 // Add process_record_user function to handle custom keycodes
 bool process_record_user(uint16_t keycode, keyrecord_t *record) {
     switch (keycode) {
+        case U_TABF:
+            if (record->event.pressed) {
+                // Press and Release Left Control and Tab
+                register_code(KC_LCTL);
+                tap_code(KC_TAB);
+                unregister_code(KC_LCTL);
+            }
+            return false; // Skip all further processing of this key
+        case U_TABB:
+            if (record->event.pressed) {
+                // Press and Release Left Control, Left Shift, and Tab
+                register_code(KC_LCTL);
+                register_code(KC_LSFT);
+                tap_code(KC_TAB);
+                unregister_code(KC_LSFT);
+                unregister_code(KC_LCTL);
+            }
+            return false; // Skip all further processing of this key
         case U_BRWSR_BCK:
             if (record->event.pressed) {
                 if (isMac) {
