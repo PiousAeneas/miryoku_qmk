@@ -26,6 +26,9 @@ MIRYOKU_LAYER_LIST
 // Add custom keycodes
 enum custom_keycodes {
     U_BRWSR_BCK = SAFE_RANGE, // Shortcut for navigating back in browser
+    U_BRWSR_FWD, // Shortcut for navigating forward in browser
+    U_APP_BCK, // Toggle App Switcher forwards
+    U_APP_FWD, // Toggle App Switcher backwards
 };
 
 void u_td_fn_boot(tap_dance_state_t *state, void *user_data) {
@@ -73,6 +76,49 @@ bool process_record_user(uint16_t keycode, keyrecord_t *record) {
                 } else {
                     register_code(KC_LALT);
                     tap_code(KC_LEFT);
+                    unregister_code(KC_LALT);
+                }
+            }
+            return false;
+        case U_BRWSR_FWD:
+            if (record->event.pressed) {
+                if (isMac) {
+                    register_code(KC_LGUI);
+                    tap_code(KC_RBRC);
+                    unregister_code(KC_LGUI);
+                } else {
+                    register_code(KC_LALT);
+                    tap_code(KC_RIGHT);
+                    unregister_code(KC_LALT);
+                }
+            }
+            return false;
+        case U_APP_BCK:
+            if (record->event.pressed) {
+                if (isMac) {
+                    register_code(KC_LGUI);
+                    register_code(KC_LSFT);
+                    tap_code(KC_TAB);
+                    unregister_code(KC_LSFT);
+                    unregister_code(KC_LGUI);
+                } else {
+                    register_code(KC_LALT);
+                    register_code(KC_LSFT);
+                    tap_code(KC_TAB);
+                    unregister_code(KC_LSFT);
+                    unregister_code(KC_LALT);
+                }
+            }
+            return false;
+        case U_APP_FWD:
+            if (record->event.pressed) {
+                if (isMac) {
+                    register_code(KC_LGUI);
+                    tap_code(KC_TAB);
+                    unregister_code(KC_LGUI);
+                } else {
+                    register_code(KC_LALT);
+                    tap_code(KC_TAB);
                     unregister_code(KC_LALT);
                 }
             }
