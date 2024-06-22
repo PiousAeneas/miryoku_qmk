@@ -19,8 +19,8 @@ MIRYOKU_LAYER_LIST
 #undef MIRYOKU_X
 
     // Added new enum members for tap dances
-    TD_CG_TOGG,
-    TD_CG_NORM,
+    U_TD_CG_TOGG,
+    U_TD_CG_NORM,
 
 };
 
@@ -39,18 +39,18 @@ void u_td_fn_U_##LAYER(tap_dance_state_t *state, void *user_data) { \
 MIRYOKU_LAYER_LIST
 #undef MIRYOKU_X
 
-// Added function to send CG_TOGG on double tap
-void td_cg_togg_fn(tap_dance_state_t *state, void *user_data) {
+// Added function to send CG_TOGG and turn on Mac mode on double tap
+void u_td_cg_togg_fn(tap_dance_state_t *state, void *user_data) {
   if (state->count == 2) {
-    tap_code16(KC_T);
+    tap_code16(CG_TOGG);
     isMac = true;  // Set Mac mode to true
   }
 }
 
-// Added function to send CG_NORM on double tap
-void td_cg_norm_fn(tap_dance_state_t *state, void *user_data) {
+// Added function to send CG_NORM and turn off Mac mode on double tap
+void u_td_cg_norm_fn(tap_dance_state_t *state, void *user_data) {
   if (state->count == 2) {
-    tap_code(KC_F);
+    tap_code16(CG_NORM);
     isMac = false; // Set Mac mode to false
   }
 }
@@ -62,8 +62,8 @@ MIRYOKU_LAYER_LIST
 #undef MIRYOKU_X
 
     // Added CG_TOGG and CG_NORM tap dance actions
-    [TD_CG_TOGG] = ACTION_TAP_DANCE_FN(td_cg_togg_fn),
-    [TD_CG_NORM] = ACTION_TAP_DANCE_FN(td_cg_norm_fn),
+    [U_TD_CG_TOGG] = ACTION_TAP_DANCE_FN(u_td_cg_togg_fn),
+    [U_TD_CG_NORM] = ACTION_TAP_DANCE_FN(u_td_cg_norm_fn),
 
 };
 
