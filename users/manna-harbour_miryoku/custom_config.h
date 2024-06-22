@@ -17,5 +17,5 @@
 #define MIRYOKU_LAYER_MEDIA \
 TD(U_TD_BOOT),     TD(U_TD_U_TAP),    TD(U_TD_U_EXTRA),  TD(U_TD_U_BASE),   U_NA,              RGB_TOG,        RGB_MOD,       U_TABB,      U_TABF,     RGB_VAI,           \
 KC_LGUI,           KC_LALT,           KC_LCTL,           KC_LSFT,           U_NA,              U_NU,           KC_MPRV,       KC_VOLD,     KC_VOLU,    KC_MNXT,           \
-CG_NORM,           KC_ALGR,           TD(U_TD_U_FUN),    TD(U_TD_U_MEDIA),  CG_TOGG,           OU_AUTO,        U_NU,          U_NU,        U_NU,       U_NU,              \
+TD(TD_CG_NORM),    KC_ALGR,           TD(U_TD_U_FUN),    TD(U_TD_U_MEDIA),  TD(TD_CG_TOGG),    OU_AUTO,        U_NU,          U_NU,        U_NU,       U_NU,              \
 U_NP,              U_NP,              U_NA,              U_NA,              U_NA,              KC_MSTP,        KC_MPLY,       KC_MUTE,     U_NP,       U_NP
