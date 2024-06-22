@@ -5,10 +5,17 @@
 
 #pragma once
 
-// Custom Media Layer. Adds Browser, System, and Excel Shortcuts.
+/*
+    Custom Media Layer. Adds Browser, System, and Excel Shortcuts.
+    1. CG_TOGG / CG_NORM toggles swaps Control and GUI, including for Paste, Copy, Cut, and Undo.
+    2. U_TABF / U_TABB are WinMac shortcuts for toggling browser tabs.
+*/
+
+#define U_TABF LCTL(KC_TAB)
+#define U_TABB LCTL(LSFT(KC_TAB))
 
 #define MIRYOKU_LAYER_MEDIA \
-TD(U_TD_BOOT),     TD(U_TD_U_TAP),    TD(U_TD_U_EXTRA),  TD(U_TD_U_BASE),   U_NA,              RGB_TOG,           RGB_MOD,           LCTL(LSFT(KC_TAB)),   LCTL(KC_TAB),      RGB_VAI,           \
-KC_LGUI,           KC_LALT,           KC_LCTL,           KC_LSFT,           U_NA,              U_NU,              KC_MPRV,           KC_VOLD,              KC_VOLU,           KC_MNXT,           \
-CG_NORM,           KC_ALGR,           TD(U_TD_U_FUN),    TD(U_TD_U_MEDIA),  CG_TOGG,           OU_AUTO,           U_NU,              U_NU,                 U_NU,              U_NU,              \
-U_NP,              U_NP,              U_NA,              U_NA,              U_NA,              KC_MSTP,           KC_MPLY,           KC_MUTE,              U_NP,              U_NP
+TD(U_TD_BOOT),     TD(U_TD_U_TAP),    TD(U_TD_U_EXTRA),  TD(U_TD_U_BASE),   U_NA,              RGB_TOG,        RGB_MOD,       U_TABB,      U_TABF,     RGB_VAI,           \
+KC_LGUI,           KC_LALT,           KC_LCTL,           KC_LSFT,           U_NA,              U_NU,           KC_MPRV,       KC_VOLD,     KC_VOLU,    KC_MNXT,           \
+CG_NORM,           KC_ALGR,           TD(U_TD_U_FUN),    TD(U_TD_U_MEDIA),  CG_TOGG,           OU_AUTO,        U_NU,          U_NU,        U_NU,       U_NU,              \
+U_NP,              U_NP,              U_NA,              U_NA,              U_NA,              KC_MSTP,        KC_MPLY,       KC_MUTE,     U_NP,       U_NP
