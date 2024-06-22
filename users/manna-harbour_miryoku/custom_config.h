@@ -11,9 +11,6 @@
     2. U_TABF / U_TABB are WinMac shortcuts for toggling browser tabs.
 */
 
-#define U_TABF LCTL(KC_TAB)
-#define U_TABB LCTL(LSFT(KC_TAB))
-
 #define MIRYOKU_LAYER_MEDIA \
 TD(U_TD_BOOT),    TD(U_TD_U_TAP),    TD(U_TD_U_EXTRA),  TD(U_TD_U_BASE),   U_NA,            RGB_TOG,        U_BRWSR_BCK,   U_TABB,      U_TABF,     U_BRWSR_FWD,       \
 KC_LGUI,          KC_LALT,           KC_LCTL,           KC_LSFT,           U_NA,            U_NU,           U_APP_BCK,     KC_VOLD,     KC_VOLU,    U_APP_FWD,         \
