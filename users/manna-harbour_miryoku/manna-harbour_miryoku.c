@@ -25,7 +25,9 @@ MIRYOKU_LAYER_LIST
 
 // Add custom keycodes
 enum custom_keycodes {
-    U_BRWSR_BCK = SAFE_RANGE, // Shortcut for navigating back in browser
+    U_TABB = SAFE_RANGE, // Go to the previous tab
+    U_TABF, // Go to the next tab
+    U_BRWSR_BCK, // Shortcut for navigating back in browser
     U_BRWSR_FWD, // Shortcut for navigating forward in browser
     U_APP_BCK, // Toggle App Switcher forwards
     U_APP_FWD, // Toggle App Switcher backwards
@@ -67,14 +69,6 @@ void u_td_win_fn(tap_dance_state_t *state, void *user_data) {
 // Add process_record_user function to handle custom keycodes
 bool process_record_user(uint16_t keycode, keyrecord_t *record) {
     switch (keycode) {
-        case U_TABF:
-            if (record->event.pressed) {
-                // Press and Release Left Control and Tab
-                register_code(KC_LCTL);
-                tap_code(KC_TAB);
-                unregister_code(KC_LCTL);
-            }
-            return false; // Skip all further processing of this key
         case U_TABB:
             if (record->event.pressed) {
                 // Press and Release Left Control, Left Shift, and Tab
@@ -82,6 +76,14 @@ bool process_record_user(uint16_t keycode, keyrecord_t *record) {
                 register_code(KC_LSFT);
                 tap_code(KC_TAB);
                 unregister_code(KC_LSFT);
+                unregister_code(KC_LCTL);
+            }
+            return false; // Skip all further processing of this key
+        case U_TABF:
+            if (record->event.pressed) {
+                // Press and Release Left Control and Tab
+                register_code(KC_LCTL);
+                tap_code(KC_TAB);
                 unregister_code(KC_LCTL);
             }
             return false; // Skip all further processing of this key
