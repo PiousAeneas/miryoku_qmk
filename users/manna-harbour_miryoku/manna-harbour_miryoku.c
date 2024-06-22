@@ -7,6 +7,8 @@
 
 #include "manna-harbour_miryoku.h"
 
+// Boolean to track if Mac mode is active (defaults to false/0)
+bool isMac = false; 
 
 // Additional Features double tap guard
 
