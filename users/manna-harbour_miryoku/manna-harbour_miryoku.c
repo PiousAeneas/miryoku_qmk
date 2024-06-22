@@ -15,6 +15,11 @@ enum {
 #define MIRYOKU_X(LAYER, STRING) U_TD_U_##LAYER,
 MIRYOKU_LAYER_LIST
 #undef MIRYOKU_X
+
+    // Added new enum members for tap dances
+    TD_CG_TOGG,
+    TD_CG_NORM,
+
 };
 
 void u_td_fn_boot(tap_dance_state_t *state, void *user_data) {
@@ -32,11 +37,30 @@ void u_td_fn_U_##LAYER(tap_dance_state_t *state, void *user_data) { \
 MIRYOKU_LAYER_LIST
 #undef MIRYOKU_X
 
+// Added function to send CG_TOGG on double tap
+void td_cg_togg_fn(tap_dance_state_t *state, void *user_data) {
+  if (state->count == 2) {
+    tap_code(CG_TOGG);
+  }
+}
+
+// Added function to send CG_NORM on double tap
+void td_cg_norm_fn(tap_dance_state_t *state, void *user_data) {
+  if (state->count == 2) {
+    tap_code(CG_NORM);
+  }
+}
+
 tap_dance_action_t tap_dance_actions[] = {
     [U_TD_BOOT] = ACTION_TAP_DANCE_FN(u_td_fn_boot),
 #define MIRYOKU_X(LAYER, STRING) [U_TD_U_##LAYER] = ACTION_TAP_DANCE_FN(u_td_fn_U_##LAYER),
 MIRYOKU_LAYER_LIST
 #undef MIRYOKU_X
+
+    // Added CG_TOGG and CG_NORM tap dance actions
+    [TD_CG_TOGG] = ACTION_TAP_DANCE_FN(td_cg_togg_fn),
+    [TD_CG_NORM] = ACTION_TAP_DANCE_FN(td_cg_norm_fn),
+
 };
 
 
