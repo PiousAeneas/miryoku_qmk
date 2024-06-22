@@ -21,7 +21,11 @@ MIRYOKU_LAYER_LIST
     // Add new enum members for tap dances to toggle Mac Mode
     U_TD_MAC,
     U_TD_WIN,
+};
 
+// Add custom keycodes
+enum custom_keycodes {
+    U_BRWSR_BCK = SAFE_RANGE, // Shortcut for navigating back in browser
 };
 
 void u_td_fn_boot(tap_dance_state_t *state, void *user_data) {
@@ -55,6 +59,27 @@ void u_td_win_fn(tap_dance_state_t *state, void *user_data) {
     keymap_config.swap_lctl_lgui = false; // Unswap Left Control and GUI
     keymap_config.swap_rctl_rgui = false; // Unswap Right Control and GUI
   }
+}
+
+// Add process_record_user function to handle custom keycodes
+bool process_record_user(uint16_t keycode, keyrecord_t *record) {
+    switch (keycode) {
+        case U_BRWSR_BCK:
+            if (record->event.pressed) {
+                if (isMac) {
+                    register_code(KC_LGUI);
+                    tap_code(KC_LBRC);
+                    unregister_code(KC_LGUI);
+                } else {
+                    register_code(KC_LALT);
+                    tap_code(KC_LEFT);
+                    unregister_code(KC_LALT);
+                }
+            }
+            return false;
+        default:
+            return true;
+    }
 }
 
 tap_dance_action_t tap_dance_actions[] = {
