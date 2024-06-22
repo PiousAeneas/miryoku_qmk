@@ -7,7 +7,7 @@
 
 /*
     Custom Media Layer. Adds Browser, System, and Excel Shortcuts.
-    1. CG_TOGG / CG_NORM toggles swaps Control and GUI, including for Paste, Copy, Cut, and Undo.
+    1. CG_TOGG / CG_NORM toggles swaps Control and GUI, including for Paste, Copy, Cut, and Undo. Tap dance actions added in manna-harbour_miryoku.c
     2. U_TABF / U_TABB are WinMac shortcuts for toggling browser tabs.
 */
 
