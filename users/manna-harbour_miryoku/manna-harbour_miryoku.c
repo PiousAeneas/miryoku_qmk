@@ -64,24 +64,19 @@ bool process_record_user(uint16_t keycode, keyrecord_t *record) {
         case U_TABB:
         case U_TABF:
             if (record->event.pressed) {
-                // Press and hold Left Control
-                register_code(KC_LCTL);
+                register_code(KC_LCTL); // Press and hold Left Control
 
                 if (keycode == U_TABB) {
-                    // If U_TABB, press and hold Left Shift
-                    register_code(KC_LSFT);
+                    register_code(KC_LSFT); // If U_TABB, press and hold Left Shift
                 }
-
-                // Tap Tab
-                tap_code(KC_TAB);
+                
+                tap_code(KC_TAB); // Tap Tab
 
                 if (keycode == U_TABB) {
-                    // If U_TABB, release Left Shift
-                    unregister_code(KC_LSFT);
+                    unregister_code(KC_LSFT); // If U_TABB, release Left Shift
                 }
-
-                // Release Left Control
-                unregister_code(KC_LCTL);
+                
+                unregister_code(KC_LCTL); // Release Left Control
             }
             return false; // Skip all further processing of this key
 
