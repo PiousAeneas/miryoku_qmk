@@ -10,15 +10,14 @@
 // Boolean to track if Mac Mode is active
 bool isMac = false; 
 
-// Additional Features double tap guard
-
 enum {
+    // Additional Features double tap guard
     U_TD_BOOT,
 #define MIRYOKU_X(LAYER, STRING) U_TD_U_##LAYER,
 MIRYOKU_LAYER_LIST
 #undef MIRYOKU_X
 
-    // Add new enum members for tap dances to toggle Mac Mode
+    // Add enum members for Mac Mode tap dance
     U_TD_MAC,
     U_TD_WIN,
 };
@@ -48,21 +47,12 @@ void u_td_fn_U_##LAYER(tap_dance_state_t *state, void *user_data) { \
 MIRYOKU_LAYER_LIST
 #undef MIRYOKU_X
 
-// Add function to turn on Mac Mode after double tap
-void u_td_mac_fn(tap_dance_state_t *state, void *user_data) {
+// Mac Mode function to handle the tap dance actions for U_TD_MAC and U_TD_WIN
+void u_td_mac_win_fn(tap_dance_state_t *state, void *user_data) {
   if (state->count == 2) {
-    isMac = true;  // Set Mac Mode to true
-    keymap_config.swap_lctl_lgui = true; // Swap Left Control and GUI
-    keymap_config.swap_rctl_rgui = true; // Swap Right Control and GUI
-  }
-}
-
-// Add function to turn off Mac Mode after double tap tap
-void u_td_win_fn(tap_dance_state_t *state, void *user_data) {
-  if (state->count == 2) {
-    isMac = false; // Set Mac Mode to false
-    keymap_config.swap_lctl_lgui = false; // Unswap Left Control and GUI
-    keymap_config.swap_rctl_rgui = false; // Unswap Right Control and GUI
+    isMac = (state->keycode == U_TD_MAC); // Toggle Mac Mode based on the keycode
+    keymap_config.swap_lctl_lgui = isMac; // Swap Control and GUI on both sides based on Mac Mode state
+    keymap_config.swap_rctl_rgui = isMac;
   }
 }
 
@@ -155,8 +145,8 @@ MIRYOKU_LAYER_LIST
 #undef MIRYOKU_X
 
     // Add Mac Mode tap dance actions
-    [U_TD_MAC] = ACTION_TAP_DANCE_FN(u_td_mac_fn),
-    [U_TD_WIN] = ACTION_TAP_DANCE_FN(u_td_win_fn),
+    [U_TD_MAC] = ACTION_TAP_DANCE_FN(u_td_mac_win_fn),
+    [U_TD_WIN] = ACTION_TAP_DANCE_FN(u_td_mac_win_fn),
 
 };
 
