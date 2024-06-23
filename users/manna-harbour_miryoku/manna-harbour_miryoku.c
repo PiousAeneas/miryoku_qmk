@@ -59,50 +59,48 @@ void u_td_mac_win_fn(tap_dance_state_t *state, void *user_data) {
 // Add process_record_user function to handle custom keycodes
 bool process_record_user(uint16_t keycode, keyrecord_t *record) {
     switch (keycode) {
+        
+        // Handle U_TABB and U_TABF custom keycodes
         case U_TABB:
-            if (record->event.pressed) {
-                // Press and Release Left Control, Left Shift, and Tab
-                register_code(KC_LCTL);
-                register_code(KC_LSFT);
-                tap_code(KC_TAB);
-                unregister_code(KC_LSFT);
-                unregister_code(KC_LCTL);
-            }
-            return false; // Skip all further processing of this key
         case U_TABF:
             if (record->event.pressed) {
-                // Press and Release Left Control and Tab
+                // Press and hold Left Control
                 register_code(KC_LCTL);
+
+                if (keycode == U_TABB) {
+                    // If U_TABB, press and hold Left Shift
+                    register_code(KC_LSFT);
+                }
+
+                // Tap Tab
                 tap_code(KC_TAB);
+
+                if (keycode == U_TABB) {
+                    // If U_TABB, release Left Shift
+                    unregister_code(KC_LSFT);
+                }
+
+                // Release Left Control
                 unregister_code(KC_LCTL);
             }
             return false; // Skip all further processing of this key
+
+        // Handle U_BRWSR_BCK and U_BRWSR_FWD custom keycodes
         case U_BRWSR_BCK:
-            if (record->event.pressed) {
-                if (isMac) {
-                    register_code(KC_LGUI);
-                    tap_code(KC_LBRC);
-                    unregister_code(KC_LGUI);
-                } else {
-                    register_code(KC_LALT);
-                    tap_code(KC_LEFT);
-                    unregister_code(KC_LALT);
-                }
-            }
-            return false;
         case U_BRWSR_FWD:
             if (record->event.pressed) {
                 if (isMac) {
-                    register_code(KC_LGUI);
-                    tap_code(KC_RBRC);
-                    unregister_code(KC_LGUI);
+                    register_code(KC_LGUI); // Press and hold Left GUI
+                    tap_code(keycode == U_BRWSR_BCK ? KC_LBRC : KC_RBRC); // Tap [ for U_BRWSR_BCK or ] for U_BRWSR_FWD
+                    unregister_code(KC_LGUI); // Release Left GUI
                 } else {
-                    register_code(KC_LALT);
-                    tap_code(KC_RIGHT);
-                    unregister_code(KC_LALT);
+                    register_code(KC_LALT); // Press and hold Left Alt
+                    tap_code(keycode == U_BRWSR_BCK ? KC_LEFT : KC_RIGHT); // Tap Left Arrow for U_BRWSR_BCK or Right Arrow for U_BRWSR_FWD
+                    unregister_code(KC_LALT); // Release Left Alt
                 }
             }
             return false;
+
         case U_APP_BCK:
             if (record->event.pressed) {
                 if (isMac) {
