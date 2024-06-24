@@ -22,8 +22,8 @@ U_NP,             U_NP,              U_NA,              U_NA,              U_NA,
 
 
 // Firmware too large: https://thomasbaart.nl/2018/12/01/reducing-firmware-size-in-qmk/
-#define NO_ACTION_MACRO
-#define NO_ACTION_FUNCTION
+#define NO_ACTION_MACRO     // Required for LTO
+#define NO_ACTION_FUNCTION  // Required for LTO
 #define DISABLE_LEADER
 #ifndef NO_DEBUG
 #define NO_DEBUG
