@@ -42,10 +42,10 @@ MIRYOKU_LAYER_LIST
   #define U_CPY C(KC_C)
   #define U_CUT C(KC_X)
   #define U_UND C(KC_Z)
-#else // Changed settings to default to WIN
-  #define U_RDO C(KC_Y) // KC_AGIN
-  #define U_PST C(KC_V) // S(KC_INS)
-  #define U_CPY C(KC_C) // C(KC_INS)
-  #define U_CUT C(KC_X) // S(KC_DEL)
-  #define U_UND C(KC_Z) // KC_UNDO
+#else
+  #define U_RDO KC_AGIN
+  #define U_PST S(KC_INS)
+  #define U_CPY C(KC_INS)
+  #define U_CUT S(KC_DEL)
+  #define U_UND KC_UNDO
 #endif
