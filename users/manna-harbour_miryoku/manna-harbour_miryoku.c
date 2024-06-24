@@ -233,46 +233,40 @@ bool process_record_user(uint16_t keycode, keyrecord_t *record) {
 
         // Excel Shortcuts
         case U_XWIN:
-            if (record->event.pressed) {
-                tap_code(KC_LALT);
-                tap_code(KC_W);
-                tap_code(KC_N);
-            }
-            return false;
         case U_XFRZ:
-            if (record->event.pressed) {
-                tap_code(KC_LALT);
-                tap_code(KC_W);
-                tap_code(KC_F);
-                tap_code(KC_F);
-            }
-            return false;
         case U_XIND:
-            if (record->event.pressed) {
-                tap_code(KC_LALT);
-                tap_code(KC_H);
-                tap_code(KC_6);
-            }
-            return false;
         case U_XOUT:
-            if (record->event.pressed) {
-                tap_code(KC_LALT);
-                tap_code(KC_H);
-                tap_code(KC_5);
-            }
-            return false;
         case U_XDECINC:
-            if (record->event.pressed) {
-                tap_code(KC_LALT);
-                tap_code(KC_H);
-                tap_code(KC_0);
-            }
-            return false;
         case U_XDECDEC:
             if (record->event.pressed) {
                 tap_code(KC_LALT);
-                tap_code(KC_H);
-                tap_code(KC_9);
+                switch (keycode) {
+                    case U_XWIN:
+                        tap_code(KC_W);
+                        tap_code(KC_N);
+                        break;
+                    case U_XFRZ:
+                        tap_code(KC_W);
+                        tap_code(KC_F);
+                        tap_code(KC_F);
+                        break;
+                    case U_XIND:
+                        tap_code(KC_H);
+                        tap_code(KC_6);
+                        break;
+                    case U_XOUT:
+                        tap_code(KC_H);
+                        tap_code(KC_5);
+                        break;
+                    case U_XDECINC:
+                        tap_code(KC_H);
+                        tap_code(KC_0);
+                        break;
+                    case U_XDECDEC:
+                        tap_code(KC_H);
+                        tap_code(KC_9);
+                        break;
+                }
             }
             return false;
 
