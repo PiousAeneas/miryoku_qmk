@@ -17,6 +17,7 @@
         since Mac Mode swaps Control and GUI for Paste, Copy, Cut, and Undo.
     6. OS-Specific Redo via process_record_user intercept for U_RDO
     7. OS-Specific Paste and Paste Special tap dance to replace U_PST
+    8. Excel Shortcuts: New Window, Freeze, Indent, Outdent, Add Decimal, Remove Decimal
 */
 
 // Set Windows as default Clipboard by overriding manna-harbour_miryoku.h
@@ -59,7 +60,15 @@ enum custom_keycodes {
     U_BRWSR_BCK,
     U_BRWSR_FWD,
 
-    U_SEARCH // "Spotlight" search
+    U_SEARCH, // "Spotlight" search
+
+    // Excel Shortcuts
+    U_XWIN,
+    U_XFRZ,
+    U_XIND,
+    U_XOUT,
+    U_XDECINC,
+    U_XDECDEC,
 };
 
 // CUSTOM FUNCTIONS
@@ -219,6 +228,51 @@ bool process_record_user(uint16_t keycode, keyrecord_t *record) {
                     tap_code(KC_S); // Tap S
                     unregister_code(KC_LGUI); // Release Left GUI
                 }
+            }
+            return false;
+
+        // Excel Shortcuts
+        case U_XWIN:
+            if (record->event.pressed) {
+                tap_code(KC_LALT);
+                tap_code(KC_W);
+                tap_code(KC_N);
+            }
+            return false;
+        case U_XFRZ:
+            if (record->event.pressed) {
+                tap_code(KC_LALT);
+                tap_code(KC_W);
+                tap_code(KC_F);
+                tap_code(KC_F);
+            }
+            return false;
+        case U_XIND:
+            if (record->event.pressed) {
+                tap_code(KC_LALT);
+                tap_code(KC_H);
+                tap_code(KC_6);
+            }
+            return false;
+        case U_XOUT:
+            if (record->event.pressed) {
+                tap_code(KC_LALT);
+                tap_code(KC_H);
+                tap_code(KC_5);
+            }
+            return false;
+        case U_XDECINC:
+            if (record->event.pressed) {
+                tap_code(KC_LALT);
+                tap_code(KC_H);
+                tap_code(KC_0);
+            }
+            return false;
+        case U_XDECDEC:
+            if (record->event.pressed) {
+                tap_code(KC_LALT);
+                tap_code(KC_H);
+                tap_code(KC_9);
             }
             return false;
 
