@@ -8,7 +8,8 @@
 [[https://github.com/manna-harbour/miryoku/][Miryoku]] is an ergonomic, minimal, orthogonal, and universal keyboard layout.  This is the repository for the development branch of [[https://github.com/manna-harbour/miryoku_qmk/tree/miryoku/users/manna-harbour_miryoku][Miryoku QMK]].
 
 
-- The Miryoku QMK development branch readme is at https://github.com/manna-harbour/miryoku_qmk/tree/miryoku/users/manna-harbour_miryoku
+- The original Miryoku QMK development branch readme is at https://github.com/manna-harbour/miryoku_qmk/tree/miryoku/users/manna-harbour_miryoku
+- The forked Miryoku QMK branch is at https://github.com/PiousAeneas/miryoku_qmk/tree/miryoku/users/manna-harbour_miryoku
 
 
 ** 
