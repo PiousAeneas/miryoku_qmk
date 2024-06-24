@@ -20,7 +20,7 @@
 #undef  U_CUT
 #undef  U_UND
 #define U_RDO C(KC_Y)
-#define U_PST C(KC_V)
+#define U_PST_WIN C(KC_V) // Basic Paste. U_PST replaced by Paste Special tap dance.
 #define U_CPY C(KC_C)
 #define U_CUT C(KC_X)
 #define U_UND C(KC_Z)
@@ -39,6 +39,9 @@ MIRYOKU_LAYER_LIST
     // Mac Mode
     U_TD_MAC,
     U_TD_WIN,
+
+    // Paste Special
+    U_TD_PST,
 };
 
 // Add custom keycodes
@@ -89,8 +92,8 @@ void u_td_win_fn(tap_dance_state_t *state, void *user_data) {
   }
 }
 
-// Paste Special action for U_PST
-void u_pst_sp_fn(void) {
+// Paste Special
+void u_pst_sp_fn(void) { // Paste Special helper function
     if (isMac) {
         // Send Shift+Opt+Cmd+V for Mac
         register_code(KC_LSFT);
@@ -109,6 +112,16 @@ void u_pst_sp_fn(void) {
         unregister_code(KC_LCTL);
     }
 }
+void u_td_pst_sp_fn(tap_dance_state_t *state, void *user_data) {
+    switch (state->count) { // Paste Special tap dance action
+        case 1:
+            tap_code16(U_PST_WIN);
+            break;
+        case 2:
+            u_td_pst_sp_fn();
+            break;
+    }
+}
 
 // TAP DANCE ACTIONS ARRAY
 tap_dance_action_t tap_dance_actions[] = {
@@ -122,25 +135,16 @@ MIRYOKU_LAYER_LIST
     // Mac Mode tap dance actions
     [U_TD_MAC] = ACTION_TAP_DANCE_FN(u_td_mac_fn),
     [U_TD_WIN] = ACTION_TAP_DANCE_FN(u_td_win_fn),
+
+    [U_TD_PST] = ACTION_TAP_DANCE_FN(u_pst_tap_dance_fn),
 };
+
+// Define U_PST as paste special tap dance to work across all keymaps.
+#define U_PST TD(U_TD_PST)
 
 // CUSTOM KEYCODE HANDLING
 bool process_record_user(uint16_t keycode, keyrecord_t *record) {
     switch (keycode) {
-
-        // Tap dance for paste special
-        case U_PST: {
-            static uint16_t u_pst_timer;
-            if (record->event.pressed) {
-                u_pst_timer = timer_read();
-            } else {
-                if (timer_elapsed(u_pst_timer) > TAPPING_TERM) {
-                    u_pst_sp_fn(); // If double tap then use paste special
-                    return false;
-                }
-            }
-            return true; // Else use default paste (Windows)
-        }
             
         // Perform redo action for Mac (Cmd+Shift+Z)
         case U_RDO:
