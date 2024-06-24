@@ -71,6 +71,27 @@ void u_td_win_fn(tap_dance_state_t *state, void *user_data) {
   }
 }
 
+// Paste Special action for U_PST
+void u_pst_sp_fn(void) {
+    if (isMac) {
+        // Send Shift+Opt+Cmd+V for Mac
+        register_code(KC_LSFT);
+        register_code(KC_LALT);
+        register_code(KC_LCMD);
+        tap_code(KC_V);
+        unregister_code(KC_LCMD);
+        unregister_code(KC_LALT);
+        unregister_code(KC_LSFT);
+    } else {
+        // Send Ctrl+Shift+V for Windows
+        register_code(KC_LCTL);
+        register_code(KC_LSFT);
+        tap_code(KC_V);
+        unregister_code(KC_LSFT);
+        unregister_code(KC_LCTL);
+    }
+}
+
 // TAP DANCE ACTIONS ARRAY
 tap_dance_action_t tap_dance_actions[] = {
 
@@ -89,6 +110,20 @@ MIRYOKU_LAYER_LIST
 bool process_record_user(uint16_t keycode, keyrecord_t *record) {
     switch (keycode) {
 
+        // Tap dance for paste special
+        switch (keycode) {
+            case U_PST:
+                static uint16_t u_pst_timer;
+                if (record->event.pressed) {
+                    u_pst_timer = timer_read();
+                } else {
+                    if (timer_elapsed(u_pst_timer) <= TAPPING_TERM) {
+                        u_pst_sp_fn(); // If double tap then use paste special
+                        return false;
+                    }
+                }
+                return true; // Else use default paste (Windows)
+            
         // Perform redo action for Mac (Cmd+Shift+Z)
         case U_RDO:
             if (record->event.pressed) {
@@ -101,7 +136,7 @@ bool process_record_user(uint16_t keycode, keyrecord_t *record) {
                     return false;
                 }
             }
-            return true; // Else use default Win redo
+            return true; // Else use default redo (Windows)
         
         // Tab navigation with U_TABB and U_TABF
         case U_TABB:
