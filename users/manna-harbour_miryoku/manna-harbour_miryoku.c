@@ -21,10 +21,6 @@ MIRYOKU_LAYER_LIST
     // Mac Mode
     U_TD_MAC,
     U_TD_WIN,
-
-    // App Switcher
-    U_TD_APP_BCK,
-    U_TD_APP_FWD,
 };
 
 // Add custom keycodes
@@ -38,7 +34,7 @@ enum custom_keycodes {
     U_BRWSR_FWD,
 };
 
-// Custom Functions
+// CUSTOM FUNCTIONS
 // Additional Features double tap guard
 void u_td_fn_boot(tap_dance_state_t *state, void *user_data) {
   if (state->count == 2) {
@@ -73,33 +69,7 @@ void u_td_win_fn(tap_dance_state_t *state, void *user_data) {
   }
 }
 
-// App Switcher
-// U_APP_FWD
-void u_td_app_fwd_fn(tap_dance_state_t *state, void *user_data) {
-    uint16_t modifier = isMac ? KC_LGUI : KC_LALT; // Determine modifier based on OS
-    if (state->count == 1) {
-        register_code(modifier);
-        tap_code(KC_TAB);
-    } else if (state->count == 2) {
-        unregister_code(modifier);
-        reset_tap_dance(state);
-    }
-}
-// U_APP_BCK
-void u_td_app_bck_fn(tap_dance_state_t *state, void *user_data) {
-    uint16_t modifier = isMac ? KC_LGUI : KC_LALT;
-    if (state->count == 1) {
-        register_code(modifier);
-        register_code(KC_LSFT);
-        tap_code(KC_TAB);
-        unregister_code(KC_LSFT);
-    } else if (state->count == 2) {
-        unregister_code(modifier);
-        reset_tap_dance(state);
-    }
-}
-
-// Tap dance actions array
+// TAP DANCE ACTIONS ARRAY
 tap_dance_action_t tap_dance_actions[] = {
 
     // Additional Features double tap guard
@@ -111,13 +81,9 @@ MIRYOKU_LAYER_LIST
     // Mac Mode tap dance actions
     [U_TD_MAC] = ACTION_TAP_DANCE_FN(u_td_mac_fn),
     [U_TD_WIN] = ACTION_TAP_DANCE_FN(u_td_win_fn),
-
-    // App Switcher tap dance actions
-    [U_TD_APP_BCK] = ACTION_TAP_DANCE_FN(u_td_app_bck_fn),
-    [U_TD_APP_FWD] = ACTION_TAP_DANCE_FN(u_td_app_fwd_fn),
 };
 
-// Add process_record_user function to handle custom keycodes
+// CUSTOM KEYCODE HANDLING
 bool process_record_user(uint16_t keycode, keyrecord_t *record) {
     switch (keycode) {
         
