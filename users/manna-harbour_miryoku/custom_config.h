@@ -22,6 +22,6 @@ U_NP,             U_NP,              U_NA,              U_NA,              U_NA,
 
 
 // Firmware too large: https://thomasbaart.nl/2018/12/01/reducing-firmware-size-in-qmk/
-#define NO_ACTION_MACRO     // Required for LTO
-#define NO_ACTION_FUNCTION  // Required for LTO
+#define NO_ACTION_MACRO     // Required for LTO. Disables deprecated action_get_macro method and M(id) keycodes.
+#define NO_ACTION_FUNCTION  // Required for LTO. Disables deprecated action_function method and AF(id) keycodes.
 #define DISABLE_LEADER
