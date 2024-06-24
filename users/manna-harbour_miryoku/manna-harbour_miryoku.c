@@ -88,6 +88,19 @@ MIRYOKU_LAYER_LIST
 // CUSTOM KEYCODE HANDLING
 bool process_record_user(uint16_t keycode, keyrecord_t *record) {
     switch (keycode) {
+
+        case U_RDO:
+            if (record->event.pressed) {
+                if (isMac) { // Perform redo action for Mac (Cmd+Shift+Z)
+                    register_code(KC_LCMD);
+                    register_code(KC_LSFT);
+                    tap_code(KC_Z);
+                    unregister_code(KC_LSFT);
+                    unregister_code(KC_LCMD);
+                    return false;
+                }
+            }
+            return true; // Else use default Win redo
         
         // Tab navigation with U_TABB and U_TABF
         case U_TABB:
