@@ -146,19 +146,17 @@ bool process_record_user(uint16_t keycode, keyrecord_t *record) {
         // Handle U_APP_BCK and U_APP_FWD custom keycodes
         case U_APP_BCK:
         case U_APP_FWD:
-            tap_dance_action_t *action = &tap_dance_actions[keycode == U_APP_BCK ? U_TD_APP_BCK : U_TD_APP_FWD]; // Initialize tap dance action
+
+            tap_dance_action_t *action = &tap_dance_actions[keycode == U_APP_BCK ? U_TD_APP_BCK : U_TD_APP_FWD]; // Initialize tap dance action based on keycode
             if (record->event.pressed) {
                 action->state.count = 0; // Reset tap count
-                action->state.keycode = keycode; // Set the keycode
-                action->state.active = true; // Set the action as active
                 action->state.pressed = true; // Set the action as pressed
                 process_tap_dance_action_on_each_tap(action); // Process the tap dance action on each tap
             } else {
                 action->state.pressed = false; // Set the action as not pressed
-                process_tap_dance_action_on_dance_finished(action); // Process the tap dance action on dance finished
-                reset_tap_dance(&action->state); // Reset the tap dance state
+                reset_tap_dance(&action->state); // Reset the tap dance state for next usage
             }
-            return false;
+            return false; // Indicate that the key event has been fully processed
         
         default:
             return true;
