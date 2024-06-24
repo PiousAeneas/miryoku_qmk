@@ -37,9 +37,12 @@ enum custom_keycodes {
     U_BRWSR_BCK,
     U_BRWSR_FWD,
 
-    // App Switcher
-    U_APP_BCK,
-    U_APP_FWD,
+    /* 
+        Remove this
+        // App Switcher
+        U_APP_BCK,
+        U_APP_FWD,
+    */
 };
 
 // Custom Functions
@@ -82,10 +85,11 @@ void u_td_win_fn(tap_dance_state_t *state, void *user_data) {
 void u_td_app_fwd_fn(tap_dance_state_t *state, void *user_data) {
     uint16_t modifier = isMac ? KC_LGUI : KC_LALT; // Determine modifier based on OS
     if (state->count == 1) {
-        register_code(modifier); // Single tap: Register modifier
-        tap_code(KC_TAB); // Tap Tab to switch to the next application
-    } else {
-        unregister_code(modifier); // Double tap: Unregister the modifier key
+        register_code(modifier);
+        tap_code(KC_TAB);
+    } else if (state->count == 2) {
+        unregister_code(modifier);
+        reset_tap_dance(state);
     }
 }
 // U_APP_BCK
@@ -95,12 +99,12 @@ void u_td_app_bck_fn(tap_dance_state_t *state, void *user_data) {
         register_code(modifier);
         register_code(KC_LSFT);
         tap_code(KC_TAB);
-    } else {
         unregister_code(KC_LSFT);
+    } else if (state->count == 2) {
         unregister_code(modifier);
+        reset_tap_dance(state);
     }
 }
-
 
 // Tap dance actions array
 tap_dance_action_t tap_dance_actions[] = {
@@ -116,8 +120,8 @@ MIRYOKU_LAYER_LIST
     [U_TD_WIN] = ACTION_TAP_DANCE_FN(u_td_win_fn),
 
     // App Switcher tap dance actions
-    [U_TD_APP_BCK] = ACTION_TAP_DANCE_FN(u_td_app_bck_fn), // Tap dance action for U_APP_BCK
-    [U_TD_APP_FWD] = ACTION_TAP_DANCE_FN(u_td_app_fwd_fn), // Tap dance action for U_APP_FWD
+    [U_TD_APP_BCK] = ACTION_TAP_DANCE_FN(u_td_app_bck_fn),
+    [U_TD_APP_FWD] = ACTION_TAP_DANCE_FN(u_td_app_fwd_fn),
 };
 
 // Add process_record_user function to handle custom keycodes
@@ -155,7 +159,7 @@ bool process_record_user(uint16_t keycode, keyrecord_t *record) {
                 }
             }
             return false;
-
+        /* REMOVE THIS?
         // Handle U_APP_BCK and U_APP_FWD custom keycodes
         case U_APP_BCK:
         case U_APP_FWD:
@@ -170,7 +174,7 @@ bool process_record_user(uint16_t keycode, keyrecord_t *record) {
                 reset_tap_dance(&action->state);
             }
             return false;
-        
+        */
         default:
             return true;
     }
