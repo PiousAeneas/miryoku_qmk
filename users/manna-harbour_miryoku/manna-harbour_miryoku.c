@@ -18,6 +18,7 @@
     6. OS-Specific Redo via process_record_user intercept for U_RDO
     7. OS-Specific Paste and Paste Special tap dance to replace U_PST
     8. Excel Shortcuts: New Window, Freeze, Indent, Outdent, Add Decimal, Remove Decimal
+    9. OS-Specific Screenshot tap dance using U_TD_PSCR.
 */
 
 // Set Windows as default Clipboard by overriding manna-harbour_miryoku.h
@@ -48,6 +49,9 @@ MIRYOKU_LAYER_LIST
 
     // Paste Special
     U_TD_PST,
+
+    // Screenshot
+    U_TD_PSCR,
 };
 
 // Add custom keycodes
@@ -88,7 +92,7 @@ void u_td_fn_U_##LAYER(tap_dance_state_t *state, void *user_data) { \
 MIRYOKU_LAYER_LIST
 #undef MIRYOKU_X
 
-// Mac Mode
+// Mac Mode tap dance action
 // Turn on Mac Mode
 void u_td_mac_fn(tap_dance_state_t *state, void *user_data) {
   if (state->count == 2) {
@@ -106,7 +110,7 @@ void u_td_win_fn(tap_dance_state_t *state, void *user_data) {
   }
 }
 
-// Paste Special
+// Paste Special tap dance action
 void u_pst_fn(void) { // Paste helper function
     if (isMac) { // Send Cmd+V for Mac
         register_code(KC_LCMD);
@@ -146,6 +150,38 @@ void u_td_pst_sp_fn(tap_dance_state_t *state, void *user_data) {
     }
 }
 
+// Screenshot tap dance action
+void u_td_pscr_fn(tap_dance_state_t *state, void *user_data) {
+    switch (state->count) {
+        case 1:
+            if (isMac) {
+                register_code(KC_LSFT);
+                register_code(KC_LCMD);
+                tap_code(KC_4);
+                unregister_code(KC_LCMD);
+                unregister_code(KC_LSFT);
+            } else {
+                register_code(KC_LGUI);
+                register_code(KC_LSFT);
+                tap_code(KC_S);
+                unregister_code(KC_LSFT);
+                unregister_code(KC_LGUI);
+            }
+            break;
+        case 2:
+            if (isMac) {
+                register_code(KC_LSFT);
+                register_code(KC_LCMD);
+                tap_code(KC_3);
+                unregister_code(KC_LCMD);
+                unregister_code(KC_LSFT);
+            } else {
+                tap_code(KC_PSCR);
+            }
+            break;
+    }
+}
+
 // TAP DANCE ACTIONS ARRAY
 tap_dance_action_t tap_dance_actions[] = {
 
@@ -161,6 +197,9 @@ MIRYOKU_LAYER_LIST
 
     // Paste Special
     [U_TD_PST] = ACTION_TAP_DANCE_FN(u_td_pst_sp_fn),
+
+    // Screenshot
+    [U_TD_PSCR] = ACTION_TAP_DANCE_FN(u_td_pscr_fn),
 };
 
 // Define U_PST as paste special tap dance to work across all keymaps.
