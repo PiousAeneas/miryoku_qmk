@@ -61,7 +61,7 @@ MIRYOKU_LAYER_LIST
 // Function for Mac Mode to handle the tap dance actions for U_TD_MAC and U_TD_WIN
 void u_td_mac_win_fn(tap_dance_state_t *state, void *user_data) {
   if (state->count == 2) {
-    isMac = (state->keycode == U_TD_MAC); // Toggle Mac Mode based on the keycode
+    isMac = (state->trigger == U_TD_MAC); // Toggle Mac Mode based on the keycode
     keymap_config.swap_lctl_lgui = isMac; // Swap Control and GUI on both sides based on Mac Mode state
     keymap_config.swap_rctl_rgui = isMac;
   }
@@ -73,13 +73,13 @@ void u_td_app_switcher_fn(tap_dance_state_t *state, void *user_data) {
 
     if (state->count == 1) {
         register_code(modifier); // Single tap: Register modifier
-        if (state->keycode == U_APP_BCK) {
+        if (state->trigger == U_APP_BCK) {
             register_code(KC_LSFT); // Register Shift for U_APP_BCK
         }
         tap_code(KC_TAB); // Tap Tab to switch applications
     } else {
         unregister_code(modifier); // Double tap: Unregister the modifier keys
-        if (state->keycode == U_APP_BCK) {
+        if (state->trigger == U_APP_BCK) {
             unregister_code(KC_LSFT); // Unregister Shift for previous application
         }
     }
@@ -145,18 +145,18 @@ bool process_record_user(uint16_t keycode, keyrecord_t *record) {
 
         // Handle U_APP_BCK and U_APP_FWD custom keycodes
         case U_APP_BCK:
-        case U_APP_FWD:
-
+        case U_APP_FWD: {
             tap_dance_action_t *action = &tap_dance_actions[keycode == U_APP_BCK ? U_TD_APP_BCK : U_TD_APP_FWD]; // Initialize tap dance action based on keycode
             if (record->event.pressed) {
                 action->state.count = 0; // Reset tap count
                 action->state.pressed = true; // Set the action as pressed
-                process_tap_dance_action_on_each_tap(action); // Process the tap dance action on each tap
+                tap_dance_pair_on_each_tap(action); // Process the tap dance action on each tap
             } else {
                 action->state.pressed = false; // Set the action as not pressed
                 reset_tap_dance(&action->state); // Reset the tap dance state for next usage
             }
             return false; // Indicate that the key event has been fully processed
+        }
         
         default:
             return true;
