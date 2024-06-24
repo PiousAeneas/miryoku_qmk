@@ -19,3 +19,15 @@ TD(U_TD_BOOT),    TD(U_TD_U_TAP),    TD(U_TD_U_EXTRA),  TD(U_TD_U_BASE),   U_NA,
 KC_LGUI,          KC_LALT,           KC_LCTL,           KC_LSFT,           U_NA,              U_SEARCH,       KC_MPRV,          KC_VOLD,     KC_VOLU,     KC_MNXT,           \
 TD(U_TD_WIN),     KC_ALGR,           TD(U_TD_U_FUN),    TD(U_TD_U_MEDIA),  TD(U_TD_MAC),      U_XFRZ,         U_XOUT,           U_XDECDEC,   U_XDECINC,   U_XIND,            \
 U_NP,             U_NP,              U_NA,              U_NA,              U_NA,              KC_MSTP,        KC_MPLY,          KC_MUTE,     U_NP,        U_NP
+
+
+// Firmware too large: https://thomasbaart.nl/2018/12/01/reducing-firmware-size-in-qmk/
+#define NO_ACTION_MACRO
+#define NO_ACTION_FUNCTION
+#define DISABLE_LEADER
+#ifndef NO_DEBUG
+#define NO_DEBUG
+#endif // !NO_DEBUG
+#if !defined(NO_PRINT) && !defined(CONSOLE_ENABLE)
+#define NO_PRINT
+#endif // !NO_PRINT
