@@ -32,6 +32,8 @@ enum custom_keycodes {
     // Browser navigation
     U_BRWSR_BCK,
     U_BRWSR_FWD,
+
+    U_SEARCH // "Spotlight" search
 };
 
 // CUSTOM FUNCTIONS
@@ -115,6 +117,21 @@ bool process_record_user(uint16_t keycode, keyrecord_t *record) {
                     register_code(KC_LALT); // Press and hold Left Alt
                     tap_code(keycode == U_BRWSR_BCK ? KC_LEFT : KC_RIGHT); // Tap Left Arrow for U_BRWSR_BCK or Right Arrow for U_BRWSR_FWD
                     unregister_code(KC_LALT); // Release Left Alt
+                }
+            }
+            return false;
+
+            // Search with U_SEARCH
+            case U_SEARCH:
+                if (record->event.pressed) {
+                if (isMac) {
+                    register_code(KC_LCMD); // Press and hold Left Command
+                    tap_code(KC_SPC); // Tap Space
+                    unregister_code(KC_LCMD); // Release Left Command
+                } else {
+                    register_code(KC_LGUI); // Press and hold Left GUI (Windows key)
+                    tap_code(KC_S); // Tap S
+                    unregister_code(KC_LGUI); // Release Left GUI
                 }
             }
             return false;
