@@ -158,38 +158,18 @@ bool process_record_user(uint16_t keycode, keyrecord_t *record) {
 
         // Handle U_APP_BCK and U_APP_FWD custom keycodes
         case U_APP_BCK:
-        case U_APP_FWD: {
-            tap_dance_action_t *action = &tap_dance_actions[keycode == U_APP_BCK ? U_TD_APP_BCK : U_TD_APP_FWD]; // Initialize tap dance action based on keycode
+        case U_APP_FWD:
             if (record->event.pressed) {
-                action->state.count = 0; // Reset tap count
-                action->state.pressed = true; // Set the action as pressed
-                tap_dance_pair_on_each_tap(&action->state, action->user_data); // Process the tap dance action on each tap
+                tap_dance_action_t *action = &tap_dance_actions[keycode == U_APP_BCK ? U_TD_APP_BCK : U_TD_APP_FWD];
+                action->state.count++;
+                action->state.pressed = true;
+                (keycode == U_APP_BCK ? u_td_app_bck_fn : u_td_app_fwd_fn)(&action->state, action->user_data);
             } else {
-                action->state.pressed = false; // Set the action as not pressed
-                reset_tap_dance(&action->state); // Reset the tap dance state for next usage
+                tap_dance_action_t *action = &tap_dance_actions[keycode == U_APP_BCK ? U_TD_APP_BCK : U_TD_APP_FWD];
+                action->state.pressed = false;
+                reset_tap_dance(&action->state);
             }
-            return false; // Indicate that the key event has been fully processed
-        }
-
-        case U_APP_BCK:
-        case U_APP_FWD: {
-            tap_dance_action_t *action = &tap_dance_actions[keycode == U_APP_BCK ? U_TD_APP_BCK : U_TD_APP_FWD]; // Initialize tap dance action based on keycode
-            if (record->event.pressed) {
-                action->state.count++; // Increment tap count
-                action->state.pressed = true; // Set the action as pressed
-                if (keycode == U_APP_BCK) {
-                    u_td_app_bck_fn(&action->state, action->user_data); // Call the custom function for U_APP_BCK
-                } else {
-                    u_td_app_fwd_fn(&action->state, action->user_data); // Call the custom function for U_APP_FWD
-                }
-            } else {
-                action->state.pressed = false; // Set the action as not pressed
-                if (action->state.count == 2) {
-                    reset_tap_dance(&action->state); // Reset the tap dance state if it was a double tap
-                }
-            }
-            return false; // Indicate that the key event has been fully processed
-        }
+            return false;
         
         default:
             return true;
