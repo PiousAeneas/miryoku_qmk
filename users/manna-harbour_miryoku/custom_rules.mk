@@ -2,6 +2,7 @@
 # https://github.com/manna-harbour/miryoku
 
 # Firmware too large: https://thomasbaart.nl/2018/12/01/reducing-firmware-size-in-qmk/
-EXTRAFLAGS      += -flto # Enables Link Time Optimization
-COMMAND_ENABLE   = no    # Commands for debug and configuration
-UNICODE_ENABLE   = no    # Unicode
+LTO_ENABLE       = yes   # Enables Link Time Optimization
+CONSOLE_ENABLE   = no    # Disables Console for debug
+COMMAND_ENABLE   = no    # Disables Commands for debug and configuration
+UNICODE_ENABLE   = no    # Disables Unicode
