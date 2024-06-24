@@ -89,9 +89,10 @@ MIRYOKU_LAYER_LIST
 bool process_record_user(uint16_t keycode, keyrecord_t *record) {
     switch (keycode) {
 
+        // Perform redo action for Mac (Cmd+Shift+Z)
         case U_RDO:
             if (record->event.pressed) {
-                if (isMac) { // Perform redo action for Mac (Cmd+Shift+Z)
+                if (isMac) {
                     register_code(KC_LCMD);
                     register_code(KC_LSFT);
                     tap_code(KC_Z);
