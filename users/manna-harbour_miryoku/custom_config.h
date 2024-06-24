@@ -6,12 +6,29 @@
 #pragma once
 
 /*
+    Custom Clipboard actions.
+    1. Set Windows as default Clipboard. Required for Mac Mode.
+    2. U_RDO is given a Mac option in manna-harbour_miryoku.c
+    3. U_PST is given a double tap for paste special in manna-harbour_miryoku.c
+*/
+
+#undef  U_RDO
+#undef  U_PST
+#undef  U_CPY
+#undef  U_CUT
+#undef  U_UND
+#define U_RDO C(KC_Y)
+#define U_PST C(KC_V)
+#define U_CPY C(KC_C)
+#define U_CUT C(KC_X)
+#define U_UND C(KC_Z)
+
+/*
     Custom Media Layer. Adds Browser, System, and Excel Shortcuts.
     1. U_TD_MAC / U_TD_WIN on double tap turns on Mac Mode which swaps Control and GUI including for Paste, Copy, Cut, and Undo (but not Redo or Paste Special).
     2. U_TABB / U_TABF are Win/Mac compatible shortcuts for toggling back / forward through browser tabs.
     3. U_BRWSR_BCK / U_BRWSR_FWD are Win/Mac compatible for navigating backwards / forwards in a browser.
-    4. U_APP_BCK / U_APP_FWD toggles App Switcher backwards / forwards in Win/Mac until doubled-tapped. (Still working on this)
-    Still need Redo and Paste Special for Win/Mac
+    4. U_SEARCH enables Spotlight search for both Windows and Mac.
 */
 
 #define MIRYOKU_LAYER_MEDIA \
