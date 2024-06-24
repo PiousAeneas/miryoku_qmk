@@ -170,6 +170,26 @@ bool process_record_user(uint16_t keycode, keyrecord_t *record) {
             }
             return false; // Indicate that the key event has been fully processed
         }
+
+        case U_APP_BCK:
+        case U_APP_FWD: {
+            tap_dance_action_t *action = &tap_dance_actions[keycode == U_APP_BCK ? U_TD_APP_BCK : U_TD_APP_FWD]; // Initialize tap dance action based on keycode
+            if (record->event.pressed) {
+                action->state.count++; // Increment tap count
+                action->state.pressed = true; // Set the action as pressed
+                if (keycode == U_APP_BCK) {
+                    u_td_app_bck_fn(&action->state, action->user_data); // Call the custom function for U_APP_BCK
+                } else {
+                    u_td_app_fwd_fn(&action->state, action->user_data); // Call the custom function for U_APP_FWD
+                }
+            } else {
+                action->state.pressed = false; // Set the action as not pressed
+                if (action->state.count == 2) {
+                    reset_tap_dance(&action->state); // Reset the tap dance state if it was a double tap
+                }
+            }
+            return false; // Indicate that the key event has been fully processed
+        }
         
         default:
             return true;
