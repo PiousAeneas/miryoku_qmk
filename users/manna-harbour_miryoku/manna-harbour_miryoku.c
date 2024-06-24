@@ -118,27 +118,23 @@ MIRYOKU_LAYER_LIST
 bool process_record_user(uint16_t keycode, keyrecord_t *record) {
     switch (keycode) {
         
-        // Handle U_TABB and U_TABF custom keycodes
+        // Tab navigation with U_TABB and U_TABF
         case U_TABB:
         case U_TABF:
             if (record->event.pressed) {
-                register_code(KC_LCTL); // Press and hold Left Control
-
+                register_code(KC_LCTL);
                 if (keycode == U_TABB) {
                     register_code(KC_LSFT); // If U_TABB, press and hold Left Shift
                 }
-                
                 tap_code(KC_TAB); // Tap Tab
-
                 if (keycode == U_TABB) {
-                    unregister_code(KC_LSFT); // If U_TABB, release Left Shift
+                    unregister_code(KC_LSFT);
                 }
-                
-                unregister_code(KC_LCTL); // Release Left Control
+                unregister_code(KC_LCTL);
             }
-            return false; // Skip all further processing of this key
+            return false;
 
-        // Handle U_BRWSR_BCK and U_BRWSR_FWD custom keycodes
+        // Browser navigation with U_BRWSR_BCK and U_BRWSR_FWD
         case U_BRWSR_BCK:
         case U_BRWSR_FWD:
             if (record->event.pressed) {
