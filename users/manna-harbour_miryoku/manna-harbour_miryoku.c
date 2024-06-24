@@ -11,7 +11,7 @@
     Custom Clipboard actions. Overrides definitions from manna-harbour_miryoku.h
     1. Set Windows as default Clipboard. Required for Mac Mode.
     2. U_RDO is given a Mac option.
-    3. U_PST is given a double tap for paste special.
+    3. U_PST redefined as a Paste Special tap dance.
 */
 
 #undef  U_RDO
@@ -132,11 +132,12 @@ tap_dance_action_t tap_dance_actions[] = {
 MIRYOKU_LAYER_LIST
 #undef MIRYOKU_X
 
-    // Mac Mode tap dance actions
+    // Mac Mode
     [U_TD_MAC] = ACTION_TAP_DANCE_FN(u_td_mac_fn),
     [U_TD_WIN] = ACTION_TAP_DANCE_FN(u_td_win_fn),
 
-    [U_TD_PST] = ACTION_TAP_DANCE_FN(u_pst_tap_dance_fn),
+    // Paste Special
+    [U_TD_PST] = ACTION_TAP_DANCE_FN(u_td_pst_sp_fn),
 };
 
 // Define U_PST as paste special tap dance to work across all keymaps.
