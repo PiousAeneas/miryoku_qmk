@@ -15,7 +15,7 @@
 */
 
 #define MIRYOKU_LAYER_MEDIA \
-TD(U_TD_BOOT),    TD(U_TD_U_TAP),    TD(U_TD_U_EXTRA),  TD(U_TD_U_BASE),   U_NA,              RGB_TOG,        U_BRWSR_BCK,      U_TABB,      U_TABF,     U_BRWSR_FWD,       \
+TD(U_TD_BOOT),    TD(U_TD_U_TAP),    TD(U_TD_U_EXTRA),  TD(U_TD_U_BASE),   U_NA,              U_SEARCH,       U_BRWSR_BCK,      U_TABB,      U_TABF,     U_BRWSR_FWD,       \
 KC_LGUI,          KC_LALT,           KC_LCTL,           KC_LSFT,           U_NA,              U_NU,           KC_MPRV,          KC_VOLD,     KC_VOLU,    KC_MNXT,           \
 TD(U_TD_WIN),     KC_ALGR,           TD(U_TD_U_FUN),    TD(U_TD_U_MEDIA),  TD(U_TD_MAC),      OU_AUTO,        U_NU,             U_NU,        U_NU,       U_NU,              \
 U_NP,             U_NP,              U_NA,              U_NA,              U_NA,              KC_MSTP,        KC_MPLY,          KC_MUTE,     U_NP,       U_NP
