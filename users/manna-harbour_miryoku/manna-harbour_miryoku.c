@@ -118,7 +118,7 @@ void u_td_pst_sp_fn(tap_dance_state_t *state, void *user_data) {
             tap_code16(U_PST_WIN);
             break;
         case 2:
-            u_td_pst_sp_fn();
+            u_pst_sp_fn();
             break;
     }
 }
