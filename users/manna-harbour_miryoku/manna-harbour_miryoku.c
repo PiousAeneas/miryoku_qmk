@@ -7,6 +7,24 @@
 
 #include "manna-harbour_miryoku.h"
 
+/*
+    Custom Clipboard actions. Overrides definitions from manna-harbour_miryoku.h
+    1. Set Windows as default Clipboard. Required for Mac Mode.
+    2. U_RDO is given a Mac option.
+    3. U_PST is given a double tap for paste special.
+*/
+
+#undef  U_RDO
+#undef  U_PST
+#undef  U_CPY
+#undef  U_CUT
+#undef  U_UND
+#define U_RDO C(KC_Y)
+#define U_PST C(KC_V)
+#define U_CPY C(KC_C)
+#define U_CUT C(KC_X)
+#define U_UND C(KC_Z)
+
 // Boolean to track if Mac Mode is active
 bool isMac = false; 
 
