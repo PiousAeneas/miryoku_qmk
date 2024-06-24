@@ -36,13 +36,6 @@ enum custom_keycodes {
     // Browser navigation
     U_BRWSR_BCK,
     U_BRWSR_FWD,
-
-    /* 
-        Remove this
-        // App Switcher
-        U_APP_BCK,
-        U_APP_FWD,
-    */
 };
 
 // Custom Functions
@@ -159,22 +152,7 @@ bool process_record_user(uint16_t keycode, keyrecord_t *record) {
                 }
             }
             return false;
-        /* REMOVE THIS?
-        // Handle U_APP_BCK and U_APP_FWD custom keycodes
-        case U_APP_BCK:
-        case U_APP_FWD:
-            if (record->event.pressed) {
-                tap_dance_action_t *action = &tap_dance_actions[keycode == U_APP_BCK ? U_TD_APP_BCK : U_TD_APP_FWD];
-                action->state.count++;
-                action->state.pressed = true;
-                (keycode == U_APP_BCK ? u_td_app_bck_fn : u_td_app_fwd_fn)(&action->state, action->user_data);
-            } else {
-                tap_dance_action_t *action = &tap_dance_actions[keycode == U_APP_BCK ? U_TD_APP_BCK : U_TD_APP_FWD];
-                action->state.pressed = false;
-                reset_tap_dance(&action->state);
-            }
-            return false;
-        */
+
         default:
             return true;
     }
