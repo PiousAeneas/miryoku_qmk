@@ -8,12 +8,18 @@
 #include "manna-harbour_miryoku.h"
 
 /*
-    Custom Clipboard actions. Overrides definitions from manna-harbour_miryoku.h
-    1. Set Windows as default Clipboard. Required for Mac Mode.
-    2. U_RDO is given a Mac option.
-    3. U_PST redefined as a Paste Special tap dance.
+    Edited manna-harbour_miryoku.c to add the following custom actions:
+    1. Mac Mode via U_TD_MAC and U_TD_WIN.
+    2. OS-Specific Tab Navigation via U_TABB and U_TABF.
+    3. OS-Specific Browser Navigation via U_BRWSR_BCK and U_BRWSR_FWD.
+    4. OS-Specific Spotlight Search via U_SEARCH.
+    5. Set Windows as default Clipboard by overriding definitions from manna-harbour_miryoku.h
+        since Mac Mode swaps Control and GUI for Paste, Copy, Cut, and Undo.
+    6. OS-Specific Redo via process_record_user intercept for U_RDO
+    7. OS-Specific Paste and Paste Special tap dance to replace U_PST
 */
 
+// Set Windows as default Clipboard by overriding manna-harbour_miryoku.h
 #undef  U_RDO
 #undef  U_PST // U_PST replaced by Paste Special tap dance.
 #undef  U_CPY
