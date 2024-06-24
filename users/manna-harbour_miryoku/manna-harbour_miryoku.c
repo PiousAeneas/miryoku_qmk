@@ -15,12 +15,11 @@
 */
 
 #undef  U_RDO
-#undef  U_PST
+#undef  U_PST // U_PST replaced by Paste Special tap dance.
 #undef  U_CPY
 #undef  U_CUT
 #undef  U_UND
 #define U_RDO C(KC_Y)
-#define U_PST_WIN C(KC_V) // Basic Paste. U_PST replaced by Paste Special tap dance.
 #define U_CPY C(KC_C)
 #define U_CUT C(KC_X)
 #define U_UND C(KC_Z)
@@ -93,9 +92,19 @@ void u_td_win_fn(tap_dance_state_t *state, void *user_data) {
 }
 
 // Paste Special
+void u_pst_fn(void) { // Paste helper function
+    if (isMac) { // Send Cmd+V for Mac
+        register_code(KC_LCMD);
+        tap_code(KC_V);
+        unregister_code(KC_LCMD);
+    } else { // Send Ctrl+V for Windows
+        register_code(KC_LCTL);
+        tap_code(KC_V);
+        unregister_code(KC_LCTL);
+    }
+}
 void u_pst_sp_fn(void) { // Paste Special helper function
-    if (isMac) {
-        // Send Shift+Opt+Cmd+V for Mac
+    if (isMac) { // Send Shift+Opt+Cmd+V for Mac
         register_code(KC_LSFT);
         register_code(KC_LALT);
         register_code(KC_LCMD);
@@ -103,8 +112,7 @@ void u_pst_sp_fn(void) { // Paste Special helper function
         unregister_code(KC_LCMD);
         unregister_code(KC_LALT);
         unregister_code(KC_LSFT);
-    } else {
-        // Send Ctrl+Shift+V for Windows
+    } else { // Send Ctrl+Shift+V for Windows
         register_code(KC_LCTL);
         register_code(KC_LSFT);
         tap_code(KC_V);
@@ -115,7 +123,7 @@ void u_pst_sp_fn(void) { // Paste Special helper function
 void u_td_pst_sp_fn(tap_dance_state_t *state, void *user_data) {
     switch (state->count) { // Paste Special tap dance action
         case 1:
-            tap_code16(U_PST_WIN);
+            u_pst_fn();
             break;
         case 2:
             u_pst_sp_fn();
