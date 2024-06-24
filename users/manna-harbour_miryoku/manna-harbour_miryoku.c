@@ -111,18 +111,18 @@ bool process_record_user(uint16_t keycode, keyrecord_t *record) {
     switch (keycode) {
 
         // Tap dance for paste special
-        switch (keycode) {
-            case U_PST:
-                static uint16_t u_pst_timer;
-                if (record->event.pressed) {
-                    u_pst_timer = timer_read();
-                } else {
-                    if (timer_elapsed(u_pst_timer) <= TAPPING_TERM) {
-                        u_pst_sp_fn(); // If double tap then use paste special
-                        return false;
-                    }
+        case U_PST: {
+            static uint16_t u_pst_timer;
+            if (record->event.pressed) {
+                u_pst_timer = timer_read();
+            } else {
+                if (timer_elapsed(u_pst_timer) > TAPPING_TERM) {
+                    u_pst_sp_fn(); // If double tap then use paste special
+                    return false;
                 }
-                return true; // Else use default paste (Windows)
+            }
+            return true; // Else use default paste (Windows)
+        }
             
         // Perform redo action for Mac (Cmd+Shift+Z)
         case U_RDO:
