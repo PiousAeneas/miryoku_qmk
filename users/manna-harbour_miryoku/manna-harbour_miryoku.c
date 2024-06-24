@@ -151,7 +151,7 @@ bool process_record_user(uint16_t keycode, keyrecord_t *record) {
             if (record->event.pressed) {
                 action->state.count = 0; // Reset tap count
                 action->state.pressed = true; // Set the action as pressed
-                tap_dance_pair_on_each_tap(action); // Process the tap dance action on each tap
+                tap_dance_pair_on_each_tap(&action->state, action->user_data); // Process the tap dance action on each tap
             } else {
                 action->state.pressed = false; // Set the action as not pressed
                 reset_tap_dance(&action->state); // Reset the tap dance state for next usage
