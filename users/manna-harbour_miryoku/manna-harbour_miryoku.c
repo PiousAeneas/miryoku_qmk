@@ -78,23 +78,29 @@ void u_td_win_fn(tap_dance_state_t *state, void *user_data) {
 }
 
 // App Switcher
-void u_td_app_switcher_fn(tap_dance_state_t *state, void *user_data) {
-    uint16_t modifier = isMac ? KC_LGUI : KC_LALT; // Determine the modifier key based on OS
-    uint16_t keycode = TAP_DANCE_KEYCODE(state); // Get the keycode associated with the tap dance action
-
+// U_APP_FWD
+void u_td_app_fwd_fn(tap_dance_state_t *state, void *user_data) {
+    uint16_t modifier = isMac ? KC_LGUI : KC_LALT; // Determine modifier based on OS
     if (state->count == 1) {
         register_code(modifier); // Single tap: Register modifier
-        if (keycode == U_TD_APP_BCK) {
-            register_code(KC_LSFT); // Register Shift for U_APP_BCK
-        }
-        tap_code(KC_TAB); // Tap Tab to switch applications
+        tap_code(KC_TAB); // Tap Tab to switch to the next application
     } else {
-        unregister_code(modifier); // Double tap: Unregister the modifier keys
-        if (keycode == U_TD_APP_BCK) {
-            unregister_code(KC_LSFT); // Unregister Shift for previous application
-        }
+        unregister_code(modifier); // Double tap: Unregister the modifier key
     }
 }
+// U_APP_BCK
+void u_td_app_bck_fn(tap_dance_state_t *state, void *user_data) {
+    uint16_t modifier = isMac ? KC_LGUI : KC_LALT;
+    if (state->count == 1) {
+        register_code(modifier);
+        register_code(KC_LSFT);
+        tap_code(KC_TAB);
+    } else {
+        unregister_code(KC_LSFT);
+        unregister_code(modifier);
+    }
+}
+
 
 // Tap dance actions array
 tap_dance_action_t tap_dance_actions[] = {
@@ -110,8 +116,8 @@ MIRYOKU_LAYER_LIST
     [U_TD_WIN] = ACTION_TAP_DANCE_FN(u_td_win_fn),
 
     // App Switcher tap dance actions
-    [U_TD_APP_BCK] = ACTION_TAP_DANCE_FN(u_td_app_switcher_fn), // Tap dance action for U_APP_BCK
-    [U_TD_APP_FWD] = ACTION_TAP_DANCE_FN(u_td_app_switcher_fn), // Tap dance action for U_APP_FWD
+    [U_TD_APP_BCK] = ACTION_TAP_DANCE_FN(u_td_app_bck_fn), // Tap dance action for U_APP_BCK
+    [U_TD_APP_FWD] = ACTION_TAP_DANCE_FN(u_td_app_fwd_fn), // Tap dance action for U_APP_FWD
 };
 
 // Add process_record_user function to handle custom keycodes
