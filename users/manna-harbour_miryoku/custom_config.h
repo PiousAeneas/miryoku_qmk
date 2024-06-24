@@ -25,9 +25,3 @@ U_NP,             U_NP,              U_NA,              U_NA,              U_NA,
 #define NO_ACTION_MACRO     // Required for LTO
 #define NO_ACTION_FUNCTION  // Required for LTO
 #define DISABLE_LEADER
-#ifndef NO_DEBUG
-#define NO_DEBUG
-#endif // !NO_DEBUG
-#if !defined(NO_PRINT) && !defined(CONSOLE_ENABLE)
-#define NO_PRINT
-#endif // !NO_PRINT
