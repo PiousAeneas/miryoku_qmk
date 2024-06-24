@@ -61,8 +61,7 @@ MIRYOKU_LAYER_LIST
 // Function for Mac Mode to handle the tap dance actions for U_TD_MAC and U_TD_WIN
 void u_td_mac_win_fn(tap_dance_state_t *state, void *user_data) {
   if (state->count == 2) {
-    uint16_t keycode = get_event(state).param;
-    isMac = (keycode == U_TD_MAC); // Set isMac based on the keycode
+    isMac = (TAP_DANCE_KEYCODE(state) == U_TD_MAC); // Toggle Mac Mode based on the keycode
     keymap_config.swap_lctl_lgui = isMac; // Swap Control and GUI on both sides based on Mac Mode state
     keymap_config.swap_rctl_rgui = isMac;
   }
@@ -71,12 +70,12 @@ void u_td_mac_win_fn(tap_dance_state_t *state, void *user_data) {
 // Function for App Switching to handle tap dance actions for U_APP_BCK and U_APP_FWD
 void u_td_app_switcher_fn(tap_dance_state_t *state, void *user_data) {
     uint16_t modifier = isMac ? KC_LGUI : KC_LALT; // Determine the modifier key based on OS
-    uint16_t keycode = get_event(state).param;
+    uint16_t keycode = TAP_DANCE_KEYCODE(state); // Get the keycode associated with the tap dance action
 
     if (state->count == 1) {
         register_code(modifier); // Single tap: Register modifier
         if (keycode == U_TD_APP_BCK) {
-            register_code(KC_LSFT); // Register Shift for U_TD_APP_BCK
+            register_code(KC_LSFT); // Register Shift for U_APP_BCK
         }
         tap_code(KC_TAB); // Tap Tab to switch applications
     } else {
