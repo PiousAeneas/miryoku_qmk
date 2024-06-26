@@ -17,8 +17,9 @@
         since Mac Mode swaps Control and GUI for Paste, Copy, Cut, and Undo.
     6. OS-Specific Redo via process_record_user intercept for U_RDO
     7. OS-Specific Paste and Paste Special tap dance to replace U_PST
-    8. Excel Shortcuts: New Window, Freeze, Indent, Outdent, Add Decimal, Remove Decimal
-    9. OS-Specific Screenshot tap dance using U_TD_PSCR.
+    8. OS-Specific em dash symbol on hyphen double tap.
+    9. Excel Shortcuts: New Window, Freeze, Indent, Outdent, Add Decimal, Remove Decimal
+    10. OS-Specific Screenshot tap dance using U_TD_PSCR.
 */
 
 // Set Windows as default Clipboard by overriding manna-harbour_miryoku.h
@@ -52,6 +53,9 @@ MIRYOKU_LAYER_LIST
 
     // Screenshot
     U_TD_PSCR,
+
+    // Em Dash
+    U_TD_EMDASH,
 };
 
 // Add custom keycodes
@@ -182,6 +186,31 @@ void u_td_pscr_fn(tap_dance_state_t *state, void *user_data) {
     }
 }
 
+// Em Dash tap dance action
+void u_td_emdash_fn(tap_dance_state_t *state, void *user_data) {
+    switch (state->count) {
+        case 1:
+            tap_code(KC_MINS);
+            break;
+        case 2:
+            if (isMac) {
+                register_code(KC_LALT);
+                register_code(KC_LSFT);
+                tap_code(KC_MINS);
+                unregister_code(KC_LSFT);
+                unregister_code(KC_LALT);
+            } else {
+                register_code(KC_LALT);
+                tap_code(KC_KP_0);
+                tap_code(KC_KP_1);
+                tap_code(KC_KP_5);
+                tap_code(KC_KP_1);
+                unregister_code(KC_LALT);
+            }
+            break;
+    }
+}
+
 // TAP DANCE ACTIONS ARRAY
 tap_dance_action_t tap_dance_actions[] = {
 
@@ -200,6 +229,9 @@ MIRYOKU_LAYER_LIST
 
     // Screenshot
     [U_TD_PSCR] = ACTION_TAP_DANCE_FN(u_td_pscr_fn),
+
+    // Em Dash
+    [U_TD_EMDASH] = ACTION_TAP_DANCE_FN(u_td_emdash_fn),
 };
 
 // Define U_PST as paste special tap dance to work across all keymaps.
