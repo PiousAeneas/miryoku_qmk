@@ -5,18 +5,25 @@ The following files were edited compared with the original repo:
 - custom_config.h
 - custom_rules.mk
 
+Firmware can be compiled using "Build Inputs" Actions workflow with all settings set to "default" since Clipboard is overriden to default to Win. Alphas default to Colemak-DH with "Extra" layer defaulting to QWERTY.
+
 Edited `manna-harbour_miryoku.c` to add the following custom actions:
 1. Mac Mode via U_TD_MAC and U_TD_WIN.
 2. OS-Specific Tab Navigation via U_TABB and U_TABF.
 3. OS-Specific Browser Navigation via U_BRWSR_BCK and U_BRWSR_FWD.
 4. OS-Specific Spotlight Search via U_SEARCH.
-5. Set Windows as default Clipboard by overriding definitions from manna-harbour_miryoku.h since Mac Mode swaps Control and GUI for Paste, Copy, Cut, and Undo.
-6. OS-Specific Redo via process_record_user intercept for U_RDO
-7. OS-Specific Paste and Paste Special tap dance to replace U_PST
-8. Excel Shortcuts: New Window, Freeze, Indent, Outdent, Add Decimal, Remove Decimal
-9. OS-Specific Screenshot tap dance using U_TD_PSCR.
+5. Excel Shortcuts: New Window, Freeze, Indent, Outdent, Add Decimal, Remove Decimal.
+6. OS-Specific Screenshot tap dance using U_TD_PSCR.
+7. OS-Specific em dash symbol on hyphen double tap (not shown on keymap).
+8. Set Windows as default Clipboard by overriding definitions from manna-harbour_miryoku.h since Mac Mode swaps Control and GUI for Paste, Copy, Cut, and Undo.
+9. OS-Specific Redo via process_record_user intercept for U_RDO (affects Nav, Mouse, and Button Layers).
+10. OS-Specific Paste and Paste Special tap dance to replace U_PST (affects Nav, Mouse, and Button Layers).
 
-Edited `custom_config.h` primarily to add a custom MIRYOKU_LAYER_MEDIA and to aedit Print Screen on MIRYOKU_LAYER_FUN. Also added optimizations to reduce firmware size.
+Edited `custom_config.h` to make the following changes:
+1. MIRYOKU_LAYER_MEDIA becomes "System" with Mac Mode toggles, Tab Navigation, Browser, Navigation, Spotlight Search, and Excel Shortcuts.
+2. MIRYOKU_LAYER_FUN gets a screen shot tap dance action instead of PrtScn i.e. `KC_PSCR`.
+3. MIRYOKU_LAYER_NUM gets an emdash tap dance action to replace hyphen i.e. `KC_MINS`.
+4. Added optimizations to reduce firmware size.
 
 Edited `custom_rules.mk` to add optimizations to reduce firmware size.
 
