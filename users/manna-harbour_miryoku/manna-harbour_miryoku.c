@@ -280,9 +280,7 @@ bool process_record_user(uint16_t keycode, keyrecord_t *record) {
                     tap_code(keycode == U_BRWSR_BCK ? KC_LBRC : KC_RBRC); // Tap [ for U_BRWSR_BCK or ] for U_BRWSR_FWD
                     unregister_code(KC_LGUI); // Release Left GUI
                 } else {
-                    register_code(KC_LALT); // Press and hold Left Alt
-                    tap_code(keycode == U_BRWSR_BCK ? KC_LEFT : KC_RIGHT); // Tap Left Arrow for U_BRWSR_BCK or Right Arrow for U_BRWSR_FWD
-                    unregister_code(KC_LALT); // Release Left Alt
+                    tap_code(keycode == U_BRWSR_BCK ? KC_WBAK : KC_WFWD); // Tap Browser Back for U_BRWSR_BCK or Browser Forward for U_BRWSR_FWD
                 }
             }
             return false;
