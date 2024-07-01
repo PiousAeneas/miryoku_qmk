@@ -6,3 +6,6 @@ LTO_ENABLE       = yes   # Enables Link Time Optimization
 CONSOLE_ENABLE   = no    # Disables Console for debug
 COMMAND_ENABLE   = no    # Disables Commands for debug and configuration
 UNICODE_ENABLE   = no    # Disables Unicode
+
+# Bootloader selection
+BOOTLOADER = caterina    # Use "caterina" Arduino boards e.g. Keyboardio Atreus.
