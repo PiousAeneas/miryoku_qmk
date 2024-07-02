@@ -83,7 +83,7 @@ enum custom_keycodes {
 // Additional Features double tap guard
 void u_td_fn_boot(tap_dance_state_t *state, void *user_data) {
   if (state->count == 2) {
-    reset_keyboard();
+    tap_code(QK_BOOT); # Replaced `reset_keyboard();`
   }
 }
 
