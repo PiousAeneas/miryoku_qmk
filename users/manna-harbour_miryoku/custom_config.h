@@ -5,6 +5,8 @@
 
 #pragma once
 
+#define CAPS_WORD_INVERT_ON_SHIFT // Holding Shift continues Caps Word but inverts the shift state
+
 /*
     Custom Media Layer. Adds Browser, System, and Excel Shortcuts.
     1. U_TD_MAC / U_TD_WIN on double tap turns on Mac Mode which swaps Control and GUI including for Paste, Copy, Cut, and Undo (but not Redo or Paste Special).
