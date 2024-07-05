@@ -23,7 +23,8 @@ Edited `custom_config.h` to make the following changes:
 1. MIRYOKU_LAYER_MEDIA becomes "System" with Mac Mode toggles, Tab Navigation, Browser, Navigation, Spotlight Search, and Excel Shortcuts.
 2. MIRYOKU_LAYER_FUN gets a screen shot tap dance action instead of PrtScn i.e. `KC_PSCR`.
 3. MIRYOKU_LAYER_NUM gets an emdash tap dance action to replace hyphen i.e. `KC_MINS`.
-4. Added optimizations to reduce firmware size.
+4. Added `#define CAPS_WORD_INVERT_ON_SHIFT` to modify Caps Word to invert on Shift.
+5. Added optimizations to reduce firmware size.
 
 Edited `custom_rules.mk` to add optimizations to reduce firmware size.
 
