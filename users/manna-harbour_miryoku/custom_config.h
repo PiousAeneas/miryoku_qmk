@@ -6,6 +6,7 @@
 #pragma once
 
 #define CAPS_WORD_INVERT_ON_SHIFT // Holding Shift continues Caps Word but inverts the shift state
+#define PERMISSIVE_HOLD // Selects the hold action when another key is pressed and then released while the dual-role key is held down, even if within the tapping term
 
 /*
     Custom Media Layer. Adds Browser, System, and Excel Shortcuts.
