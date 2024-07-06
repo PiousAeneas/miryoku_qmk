@@ -24,7 +24,8 @@ Edited `custom_config.h` to make the following changes:
 2. MIRYOKU_LAYER_FUN gets a screen shot tap dance action instead of PrtScn i.e. `KC_PSCR`.
 3. MIRYOKU_LAYER_NUM gets an emdash tap dance action to replace hyphen i.e. `KC_MINS`.
 4. Added `#define CAPS_WORD_INVERT_ON_SHIFT` to modify Caps Word to invert on Shift. This required copying over all the changes from [#20092](https://github.com/qmk/qmk_firmware/commit/ae63c0f509fae71270fb5885d504ee26cbad95ff) because of [#287](https://github.com/manna-harbour/miryoku/discussions/287).
-5. Added optimizations to reduce firmware size.
+5. Added `#define PERMISSIVE_HOLD` to turn on permissive hold globally for use with e.g. layer tap for Caps Word, Shift keys, Ctrl+Del.
+6. Added optimizations to reduce firmware size.
 
 Edited `custom_rules.mk` to add optimizations to reduce firmware size.
 
