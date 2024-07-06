@@ -20,7 +20,7 @@ Edited `manna-harbour_miryoku.c` to add the following custom actions:
 10. OS-Specific Paste and Paste Special tap dance to replace U_PST (affects Nav, Mouse, and Button Layers).
 
 Edited `custom_config.h` to make the following changes:
-1. MIRYOKU_LAYER_MEDIA becomes "System" with Mac Mode toggles, Tab Navigation, Browser, Navigation, Spotlight Search, and Excel Shortcuts.
+1. MIRYOKU_LAYER_MEDIA becomes "System" with Mac Mode toggles, Tab Navigation, Browser Navigation, Spotlight Search, and Excel Shortcuts.
 2. MIRYOKU_LAYER_FUN gets a screen shot tap dance action instead of PrtScn i.e. `KC_PSCR`.
 3. MIRYOKU_LAYER_NUM gets an emdash tap dance action to replace hyphen i.e. `KC_MINS`.
 4. Added `#define CAPS_WORD_INVERT_ON_SHIFT` to modify Caps Word to invert on Shift. This required copying over all the changes from [#20092](https://github.com/qmk/qmk_firmware/commit/ae63c0f509fae71270fb5885d504ee26cbad95ff) because of [#287](https://github.com/manna-harbour/miryoku/discussions/287).
