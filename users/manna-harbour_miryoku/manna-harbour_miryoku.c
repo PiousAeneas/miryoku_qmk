@@ -353,7 +353,7 @@ MIRYOKU_LAYER_LIST
 };
 
 
-// shift functions
+// shift functions: Shift + Caps Word = Caps Lock
 
 const key_override_t capsword_key_override = ko_make_basic(MOD_MASK_SHIFT, CW_TOGG, KC_CAPS);
 
