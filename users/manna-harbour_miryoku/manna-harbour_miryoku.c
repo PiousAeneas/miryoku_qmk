@@ -13,11 +13,10 @@
     2. OS-Specific Tab Navigation via U_TABB and U_TABF.
     3. OS-Specific Browser Navigation via U_BRWSR_BCK and U_BRWSR_FWD.
     4. OS-Specific Spotlight Search via U_SEARCH.
-    5. Set Windows as default Clipboard by overriding definitions from manna-harbour_miryoku.h
-        since Mac Mode swaps Control and GUI for Paste, Copy, Cut, and Undo.
-    6. OS-Specific Redo via process_record_user intercept for U_RDO
-    7. OS-Specific Paste and Paste Special tap dance to replace U_PST
-    8. OS-Specific em dash symbol via U_MDASH.
+    5. Set Windows as default Clipboard by overriding definitions from manna-harbour_miryoku.h since Mac Mode swaps Control and GUI for Paste, Copy, Cut, and Undo.
+    6. OS-Specific Redo via process_record_user intercept for U_RDO (affects Nav, Mouse, and Button Layers).
+    7. OS-Specific Paste and Paste Special tap dance to replace U_PST (affects Nav, Mouse, and Button Layers).
+    8. OS-Specific em dash symbol via U_MDASH  (for custom Sym layer).
     9. Excel Shortcuts: New Window, Freeze, Indent, Outdent, Add Decimal, Remove Decimal
     10. OS-Specific Screenshot tap dance using U_TD_PSCR.
 */
