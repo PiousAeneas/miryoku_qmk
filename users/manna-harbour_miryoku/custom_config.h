@@ -38,6 +38,13 @@ KC_COLN,           KC_DLR,            KC_PERC,           KC_CIRC,           KC_P
 KC_TILD,           KC_EXLM,           KC_AT,             KC_HASH,           KC_PIPE,           U_NA,              TD(U_TD_U_SYM),    TD(U_TD_U_MOUSE),  KC_ALGR,           U_NA,              \
 U_NP,              U_NP,              KC_LPRN,           KC_RPRN,           U_MDASH,           U_NA,              U_NA,              U_NA,              U_NP,              U_NP
 
+// Added Combined Mode acceleration keys
+#define MIRYOKU_LAYER_MOUSE \
+TD(U_TD_BOOT),     TD(U_TD_U_TAP),    TD(U_TD_U_EXTRA),  TD(U_TD_U_BASE),   KC_ACL2,              U_RDO,             U_PST,             U_CPY,             U_CUT,             U_UND,             \
+KC_LGUI,           KC_LALT,           KC_LCTL,           KC_LSFT,           KC_ACL1,              U_NU,              KC_MS_L,           KC_MS_D,           KC_MS_U,           KC_MS_R,           \
+U_NA,              KC_ALGR,           TD(U_TD_U_SYM),    TD(U_TD_U_MOUSE),  KC_ACL0,              U_NU,              KC_WH_L,           KC_WH_D,           KC_WH_U,           KC_WH_R,           \
+U_NP,              U_NP,              U_NA,              U_NA,              U_NA,              KC_BTN2,           KC_BTN1,           KC_BTN3,           U_NP,              U_NP
+
 // Optimizations to reduce firmware size: https://thomasbaart.nl/2018/12/01/reducing-firmware-size-in-qmk/
 #define NO_ACTION_MACRO     // Required for LTO. Disables deprecated action_get_macro method and M(id) keycodes.
 #define NO_ACTION_FUNCTION  // Required for LTO. Disables deprecated action_function method and AF(id) keycodes.
