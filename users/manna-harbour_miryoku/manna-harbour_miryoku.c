@@ -69,6 +69,7 @@ enum custom_keycodes {
     U_BRWSR_FWD,
 
     U_SEARCH, // "Spotlight" search
+    U_MDASH, // Em Dash
 
     // Excel Shortcuts
     U_XWIN,
@@ -285,9 +286,9 @@ bool process_record_user(uint16_t keycode, keyrecord_t *record) {
             }
             return false;
 
-            // Search with U_SEARCH
-            case U_SEARCH:
-                if (record->event.pressed) {
+        // Search with U_SEARCH
+        case U_SEARCH:
+            if (record->event.pressed) {
                 if (isMac) {
                     register_code(KC_LCMD); // Press and hold Left Command
                     tap_code(KC_SPC); // Tap Space
@@ -296,6 +297,26 @@ bool process_record_user(uint16_t keycode, keyrecord_t *record) {
                     register_code(KC_LGUI); // Press and hold Left GUI (Windows key)
                     tap_code(KC_S); // Tap S
                     unregister_code(KC_LGUI); // Release Left GUI
+                }
+            }
+            return false;
+
+        // Em Dash
+        case U_MDASH:
+            if (record->event.pressed) {
+                if (isMac) { /// Mac em dash
+                    register_code(KC_LALT);
+                    register_code(KC_LSFT);
+                    tap_code(KC_MINS);
+                    unregister_code(KC_LSFT);
+                    unregister_code(KC_LALT);
+                } else { /// Win em dash
+                    register_code(KC_LALT);
+                    tap_code(KC_KP_0);
+                    tap_code(KC_KP_1);
+                    tap_code(KC_KP_5);
+                    tap_code(KC_KP_1);
+                    unregister_code(KC_LALT);
                 }
             }
             return false;
