@@ -1,5 +1,5 @@
-![Custom Miryoku Key Map](https://github.com/PiousAeneas/miryoku_qmk/blob/miryoku/users/manna-harbour_miryoku/keyboard-layout-custom-miryoku-full.png)
-Edit the layout by dragging the [Keyboard Layout Editor JSON](https://github.com/PiousAeneas/miryoku_qmk/blob/miryoku/users/manna-harbour_miryoku/keyboard-layout-custom-miryoku-full.json) into [http://www.keyboard-layout-editor.com/#/](http://www.keyboard-layout-editor.com/#/)
+![Custom Miryoku Key Map](https://github.com/PiousAeneas/miryoku_qmk/blob/miryoku/users/manna-harbour_miryoku/custom-miryoku-layout.png)
+Edit the layout by dragging the [Keyboard Layout Editor JSON](https://github.com/PiousAeneas/miryoku_qmk/blob/miryoku/users/manna-harbour_miryoku/custom-miryoku-layout.json) into [http://www.keyboard-layout-editor.com/#/](http://www.keyboard-layout-editor.com/#/)
 
 
 The following files were edited compared with the original repo:
