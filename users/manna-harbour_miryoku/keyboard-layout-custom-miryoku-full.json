@@ -1,0 +1,2128 @@
+[
+  [
+    {
+      "x": 3,
+      "t": "#000000\n\n\n\n#595959",
+      "a": 7,
+      "fa": [
+        9
+      ],
+      "w": 13.5,
+      "h": 0.75,
+      "d": true
+    },
+    "<b>Custom Miryoku Layout</b>"
+  ],
+  [
+    {
+      "y": -0.25,
+      "x": 1.75,
+      "t": "#000000\n#b71446\n#1c9109\n#142fb7\n#595959\n\n#595959\n#142fb7",
+      "a": 4,
+      "f": 1,
+      "w": 1.25,
+      "h": 1.25
+    },
+    "Q\nF12\n{\n[\nBoot\n\n<i class='mss mss-Undo-5'></i>\n{",
+    {
+      "w": 1.25,
+      "h": 1.25
+    },
+    "W\nF7\n&\n7\nTap\n\n<i class='kb kb-Scissors-1'></i>\n&",
+    {
+      "w": 1.25,
+      "h": 1.25
+    },
+    "F\nF8\n*\n8\nExtra\n\n<i class='fa fa-copy'></i>\n*",
+    {
+      "w": 1.25,
+      "h": 1.25
+    },
+    "P\nF9\n(\n9\nBase\n\n<i class='fa fa-paste'></i><sup>sp</sup>\n(",
+    {
+      "t": "#000000\n#b71446\n#1c9109\n#142fb7\n\n\n#595959\n#142fb7\n#e55b10",
+      "w": 1.25,
+      "h": 1.25
+    },
+    "B\n<sub>Snip</sub><sup>PrtScn</sup>\n}\n]\n\n\n<i class='mss mss-Redo-2'></i>\n}\n<i class='fa fa-mouse-pointer'></I><sub>2",
+    {
+      "t": "#000000",
+      "a": 5,
+      "f": 3,
+      "fa": [
+        2
+      ],
+      "w": 3.5,
+      "h": 3.75,
+      "d": true
+    },
+    "Layers are designed orthogonally with a single purpose per hand and are accessed by holding a thumb key on the opposite hand. All layers on the same hand are based on the same basic key arrangement. Holding layer change and modifiers on one hand combined with a single key press on the other hand can produce any combination of modifiers and single keys without any finger contortions. Single function mods are also defined on layers on the same hand as the layer change thumb key so layer change and mods can be held in any order or simultaneously without race conditions.",
+    {
+      "t": "#000000\n#bf16db\n#e55b10\n#108896\n\n\n\n#595959",
+      "a": 4,
+      "f": 1,
+      "w": 1.25,
+      "h": 1.25
+    },
+    "J\n+Wn\nRedo\nRedo\n\n\n\n<i class='mss mss-Redo-2'></i>",
+    {
+      "t": "#000000\n#bf16db\n#e55b10\n#108896\n#595959\n\n\n#595959",
+      "w": 1.25,
+      "h": 1.25
+    },
+    "L\nBrwsr<br>Bck\nPste<sup>sp</sup>\nPste<sup>sp</sup>\nBase\n\n\n<i class='fa fa-paste'></i><sup>sp</sup>",
+    {
+      "x": 1.25,
+      "w": 1.25,
+      "h": 1.25
+    },
+    "Y\nTab<br>Fwd\nCut\nCut\nTap\n\n\n<i class='kb kb-Scissors-1'></i>",
+    {
+      "w": 1.25,
+      "h": 1.25
+    },
+    "\"\nBrwsr<br>Fwd\nUndo\nUndo\nBoot\n\n'\n<i class='mss mss-Undo-5'></i>"
+  ],
+  [
+    {
+      "y": -0.99,
+      "x": 14,
+      "w": 1.25,
+      "h": 1.25
+    },
+    "U\nTab<br>Bck\nCopy\nCopy\nExtra\n\n\n<i class='fa fa-copy'></i>"
+  ],
+  [
+    {
+      "y": 0.24,
+      "x": 1.75,
+      "t": "#000000\n#b71446\n#1c9109\n#142fb7\n#595959\n\n#595959\n#142fb7\n\n#595959",
+      "w": 1.25,
+      "h": 1.25
+    },
+    "A\nF11\n:\n;\nSuper <i class='fa fa-angle-up'></i>\n\n<i class='fa fa-windows'></i>\n:\n\n<i class='fa fa-angle-up'></i>",
+    {
+      "t": "#000000\n#b71446\n#1c9109\n#142fb7\n#595959\n\n#595959\n#142fb7",
+      "w": 1.25,
+      "h": 1.25
+    },
+    "R\nF4\n$\n4\nAlt\n\n<i class='mss mss-Unicode-Option-3'></i>\n$",
+    {
+      "t": "#000000\n#b71446\n#1c9109\n#142fb7\n#595959\n\n#595959\n#142fb7\n\n#595959",
+      "w": 1.25,
+      "h": 1.25
+    },
+    "S\nF5\n%\n5\nCtrl <i class='mss mss-Unicode-Command-3'></i>\n\n<i class='fa fa-angle-up'></i>\n%\n\n<i class='mss mss-Unicode-Command-3'></i>",
+    {
+      "t": "#000000\n#b71446\n#1c9109\n#142fb7\n#595959\n\n#595959\n#142fb7",
+      "w": 1.25,
+      "h": 1.25
+    },
+    "T\nF6\n^\n6\nShift\n\n&uArr;\n^",
+    {
+      "t": "#000000\n#b71446\n#1c9109\n#142fb7\n\n\n\n#142fb7\n#e55b10",
+      "w": 1.25,
+      "h": 1.25
+    },
+    "G\nScroll<br>Lock\n+\n=\n\n\n\n+\n<i class='fa fa-mouse-pointer'></I><sub>1",
+    {
+      "x": 3.5,
+      "t": "#000000\n#bf16db\n\n#108896\n\n\n\n108896",
+      "w": 1.25,
+      "h": 1.25
+    },
+    "M\n<i class='fa fa-search'></i>\n\nCaps<br>Wrd\n\n\n\n<i class='fa fa-lock'></i>",
+    {
+      "t": "#000000\n#bf16db\n#e55b10\n#108896\n#595959\n\n\n#595959",
+      "w": 1.25,
+      "h": 1.25
+    },
+    "N\n<i class='fa fa-fast-backward'></i>\n<i class='fa fa-long-arrow-left'></i>\n<i class='fa fa-caret-left'></i>\nShift\n\n\n&uArr;",
+    {
+      "x": 1.25,
+      "w": 1.25,
+      "h": 1.25
+    },
+    "I\n<i class='kb kb-Multimedia-Volume-Up-2'></i>\n<i class='fa fa-long-arrow-up'></i>\n<i class='fa fa-caret-up'></i>\nAlt\n\n\n<i class='mss mss-Unicode-Option-3'></i>",
+    {
+      "t": "#000000\n#bf16db\n#e55b10\n#108896\n#595959\n\n\n#595959\n\n#595959",
+      "w": 1.25,
+      "h": 1.25
+    },
+    "O\n<i class='fa fa-fast-forward'></i>\n<i class='fa fa-long-arrow-right'></i>\n<i class='fa fa-caret-right'></i>\nSuper <i class='fa fa-angle-up'></i>\n\n\n<i class='fa fa-windows'></i>\n\n<i class='fa fa-angle-up'></i>"
+  ],
+  [
+    {
+      "y": -0.9900000000000002,
+      "x": 14,
+      "w": 1.25,
+      "h": 1.25
+    },
+    "E\n<i class='kb kb-Multimedia-Volume-Down-1'></i>\n<i class='fa fa-long-arrow-down'></i>\n<i class='fa fa-caret-down'></i>\nCtrl <i class='mss mss-Unicode-Command-3'></i>\n\n\n<i class='fa fa-angle-up'></i>\n\n<i class='mss mss-Unicode-Command-3'></i>"
+  ],
+  [
+    {
+      "y": 0.2400000000000002,
+      "x": 1.75,
+      "t": "#000000\n#b71446\n#1c9109\n#142fb7\n#bf16db\n\n#595959\n#142fb7",
+      "w": 1.25,
+      "h": 1.25
+    },
+    "Z\nF10\n~\n`\nWin\n\n<i class='mss mss-Undo-5'></i><br>Button\n~",
+    {
+      "t": "#000000\n#b71446\n#1c9109\n#142fb7\n#595959\n\n#595959\n#142fb7",
+      "w": 1.25,
+      "h": 1.25
+    },
+    "X\nF1\n!\n1\nAltGr\n\n<i class='kb kb-Scissors-1'></i>\n!",
+    {
+      "w": 1.25,
+      "h": 1.25
+    },
+    "C\nF2\n@\n2\nOpp\n\n<i class='fa fa-copy'></i>\n@",
+    {
+      "w": 1.25,
+      "h": 1.25
+    },
+    "D\nF3\n#\n3\nCur\n\n<i class='fa fa-paste'></i><sup>sp</sup>\n#",
+    {
+      "t": "#000000\n#b71446\n#1c9109\n#142fb7\n#bf16db\n\n#595959\n#142fb7\n#e55b10",
+      "w": 1.25,
+      "h": 1.25
+    },
+    "V\nPause<br>Break\n|\n\\\nMac\n\n<i class='mss mss-Redo-2'></i>\n|\n<i class='fa fa-mouse-pointer'></I><sub>0",
+    {
+      "x": 3.5,
+      "t": "#000000\n#bf16db\n\n#108896\n\n\n\n#595959",
+      "w": 1.25,
+      "h": 1.25
+    },
+    "K\nFrz\n\nInsrt\n\n\n\n<i class='mss mss-Redo-2'></i>",
+    {
+      "t": "#000000\n#bf16db\n#e55b10\n#108896\n#595959\n\n\n#595959",
+      "w": 1.25,
+      "h": 1.25
+    },
+    "H\n<i class='fa fa-outdent'></i>\n<i class='fa fa-angle-double-left'></i>\nHome\nCur\n\n\n<i class='fa fa-paste'></i><sup>sp</sup>",
+    {
+      "x": 1.25,
+      "w": 1.25,
+      "h": 1.25
+    },
+    ">\n0.00\n<i class='fa fa-angle-double-up'></i>\nPgUp\nAltGr\n\n.\n<i class='kb kb-Scissors-1'></i>",
+    {
+      "t": "#000000\n#bf16db\n#e55b10\n#108896\n\n\n\n#595959",
+      "w": 1.25,
+      "h": 1.25
+    },
+    "?\n<i class='fa fa-indent'></i>\n<i class='fa fa-angle-double-right'></i>\nEnd\n\n\n/\n<i class='mss mss-Undo-5'></i><br>Button"
+  ],
+  [
+    {
+      "y": -0.9900000000000002,
+      "x": 14,
+      "t": "#000000\n#bf16db\n#e55b10\n#108896\n#595959\n\n\n#595959",
+      "w": 1.25,
+      "h": 1.25
+    },
+    "<\n0.0\n<i class='fa fa-angle-double-down'></i>\nPgDn\nOpp\n\n,\n<i class='fa fa-copy'></i>"
+  ],
+  [
+    {
+      "y": 0.4900000000000002,
+      "x": 5.75,
+      "t": "#000000\n#b71446\n#1c9109\n#142fb7\n#bf16db\n\n#595959\n#142fb7",
+      "w": 1.25,
+      "h": 1.25
+    },
+    "Esc\nApp\n(\n.\nSys\n\nMiddle\n>",
+    {
+      "t": "#000000\n#b71446\n#1c9109\n#142fb7\n#108896\n\n#595959\n#142fb7",
+      "w": 1.25,
+      "h": 1.25
+    },
+    "Spc\nSpc\n)\n0\nNav\n\nLeft\n)",
+    {
+      "t": "#000000\n#b71446\n#1c9109\n#142fb7\n#e55b10\n\n#595959\n#142fb7",
+      "w": 1.25,
+      "h": 1.25
+    },
+    "<i class='kb kb-Tab-1'></i>\n<i class='kb kb-Tab-1'></i>\n—\n-\nMouse\n\nRight\n_",
+    {
+      "x": 0.5,
+      "t": "#000000\n#bf16db\n#e55b10\n#108896\n#1c9109\n\n\n#595959",
+      "w": 1.25,
+      "h": 1.25
+    },
+    "<i class='kb kb-Return-2'></i>\n<i class='kb kb-Multimedia-Stop'></i>\nRight\n<i class='kb kb-Return-2'></i>\nSym\n\n\nRight",
+    {
+      "t": "#000000\n#bf16db\n#e55b10\n#108896\n#142fb7\n\n\n#595959",
+      "w": 1.25,
+      "h": 1.25
+    },
+    "<i class='kb kb-Unicode-BackSpace-DeleteLeft-Big'></i>\n<i class='kb kb-Multimedia-Play-Pause'></i>\nLeft\n<i class='kb kb-Unicode-BackSpace-DeleteLeft-Big'></i>\nNum\n\n\nLeft",
+    {
+      "t": "#000000\n#bf16db\n#e55b10\n#108896\n#b71446\n\n\n#595959",
+      "w": 1.25,
+      "h": 1.25
+    },
+    "<i class='kb kb-Unicode-DeleteRight-Big'></i>\n<i class='kb kb-Multimedia-Mute-2'></i>\nMiddle\n<i class='kb kb-Unicode-DeleteRight-Big'></i>\nFun\n\n\nMiddle"
+  ],
+  [
+    {
+      "y": 0.5,
+      "t": "#000000",
+      "a": 7,
+      "w": 0.75,
+      "h": 0.75
+    },
+    "Q",
+    {
+      "w": 0.75,
+      "h": 0.75
+    },
+    "W",
+    {
+      "w": 0.75,
+      "h": 0.75
+    },
+    "F",
+    {
+      "w": 0.75,
+      "h": 0.75
+    },
+    "P",
+    {
+      "w": 0.75,
+      "h": 0.75
+    },
+    "B",
+    {
+      "a": 5,
+      "f": 3,
+      "fa": [
+        0,
+        1,
+        0,
+        0,
+        0,
+        0,
+        1
+      ],
+      "w": 2,
+      "h": 2.25,
+      "d": true
+    },
+    "<b>Base Layer</b>\nExtra Layer is Qwerty\n\n\n\n\nColemak-DH with dual function (tap/hold) home row mods and thumb key layer change. Tap-hold auto-repeat is disabled on Base Layer.",
+    {
+      "a": 7,
+      "f": 1,
+      "w": 0.75,
+      "h": 0.75
+    },
+    "J",
+    {
+      "w": 0.75,
+      "h": 0.75
+    },
+    "L",
+    {
+      "x": 0.75,
+      "w": 0.75,
+      "h": 0.75
+    },
+    "Y",
+    {
+      "a": 5,
+      "w": 0.75,
+      "h": 0.75
+    },
+    "\"\n\n\n\n\n\n'",
+    {
+      "x": 0.5,
+      "a": 7,
+      "w": 0.75,
+      "h": 0.75
+    },
+    "Undo",
+    {
+      "w": 0.75,
+      "h": 0.75
+    },
+    "Cut",
+    {
+      "w": 0.75,
+      "h": 0.75
+    },
+    "Copy",
+    {
+      "w": 0.75,
+      "h": 0.75
+    },
+    "Paste",
+    {
+      "w": 0.75,
+      "h": 0.75
+    },
+    "Redo",
+    {
+      "a": 5,
+      "f": 3,
+      "fa": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        1
+      ],
+      "w": 2,
+      "h": 2.25,
+      "d": true
+    },
+    "<b>Button Layer</b>\n\n\n\n\n\nMouse buttons, mods, and clipboard keys for use with integrated or external pointing devices, used with either hand. Activated manually by holding a bottom row pinkie key.",
+    {
+      "a": 7,
+      "f": 1,
+      "w": 0.75,
+      "h": 0.75
+    },
+    "Redo",
+    {
+      "w": 0.75,
+      "h": 0.75
+    },
+    "Paste",
+    {
+      "x": 0.75,
+      "w": 0.75,
+      "h": 0.75
+    },
+    "Cut",
+    {
+      "w": 0.75,
+      "h": 0.75
+    },
+    "Undo"
+  ],
+  [
+    {
+      "y": -0.9900000000000002,
+      "x": 7.25,
+      "w": 0.75,
+      "h": 0.75
+    },
+    "U",
+    {
+      "x": 9.25,
+      "w": 0.75,
+      "h": 0.75
+    },
+    "Copy"
+  ],
+  [
+    {
+      "y": -0.2599999999999998,
+      "w": 0.75,
+      "h": 0.75
+    },
+    "A\n\n\n\nSup",
+    {
+      "w": 0.75,
+      "h": 0.75
+    },
+    "R\n\n\n\nAlt",
+    {
+      "w": 0.75,
+      "h": 0.75
+    },
+    "S\n\n\n\nCtrl",
+    {
+      "w": 0.75,
+      "h": 0.75
+    },
+    "T\n\n\n\nShift",
+    {
+      "w": 0.75,
+      "h": 0.75
+    },
+    "G",
+    {
+      "x": 2,
+      "w": 0.75,
+      "h": 0.75
+    },
+    "M",
+    {
+      "w": 0.75,
+      "h": 0.75
+    },
+    "N\n\n\n\nShift",
+    {
+      "x": 0.75,
+      "w": 0.75,
+      "h": 0.75
+    },
+    "I\n\n\n\nAlt",
+    {
+      "w": 0.75,
+      "h": 0.75
+    },
+    "O\n\n\n\nSup",
+    {
+      "x": 0.5,
+      "w": 0.75,
+      "h": 0.75
+    },
+    "Super",
+    {
+      "w": 0.75,
+      "h": 0.75
+    },
+    "Alt",
+    {
+      "w": 0.75,
+      "h": 0.75
+    },
+    "Ctrl",
+    {
+      "w": 0.75,
+      "h": 0.75
+    },
+    "Shift",
+    {
+      "w": 0.75,
+      "h": 0.75
+    },
+    "",
+    {
+      "x": 2,
+      "w": 0.75,
+      "h": 0.75
+    },
+    "",
+    {
+      "w": 0.75,
+      "h": 0.75
+    },
+    "Shift",
+    {
+      "x": 0.75,
+      "w": 0.75,
+      "h": 0.75
+    },
+    "Alt",
+    {
+      "w": 0.75,
+      "h": 0.75
+    },
+    "Super"
+  ],
+  [
+    {
+      "y": -0.9900000000000002,
+      "x": 7.25,
+      "w": 0.75,
+      "h": 0.75
+    },
+    "E\n\n\n\nCtrl",
+    {
+      "x": 9.25,
+      "w": 0.75,
+      "h": 0.75
+    },
+    "Ctrl"
+  ],
+  [
+    {
+      "y": -0.2599999999999998,
+      "w": 0.75,
+      "h": 0.75
+    },
+    "Z\n\n\n\nBut",
+    {
+      "w": 0.75,
+      "h": 0.75
+    },
+    "X",
+    {
+      "w": 0.75,
+      "h": 0.75
+    },
+    "C",
+    {
+      "w": 0.75,
+      "h": 0.75
+    },
+    "D",
+    {
+      "w": 0.75,
+      "h": 0.75
+    },
+    "V",
+    {
+      "x": 2,
+      "w": 0.75,
+      "h": 0.75
+    },
+    "K",
+    {
+      "w": 0.75,
+      "h": 0.75
+    },
+    "H",
+    {
+      "x": 0.75,
+      "a": 5,
+      "w": 0.75,
+      "h": 0.75
+    },
+    ">\n\n\n\n\n\n.",
+    {
+      "w": 0.75,
+      "h": 0.75
+    },
+    "?\n\n\n\nBut\n\n/",
+    {
+      "x": 0.5,
+      "c": "#bbbbbb",
+      "a": 7,
+      "w": 0.75,
+      "h": 0.75
+    },
+    "Undo",
+    {
+      "c": "#cccccc",
+      "w": 0.75,
+      "h": 0.75
+    },
+    "Cut",
+    {
+      "w": 0.75,
+      "h": 0.75
+    },
+    "Copy",
+    {
+      "w": 0.75,
+      "h": 0.75
+    },
+    "Paste",
+    {
+      "w": 0.75,
+      "h": 0.75
+    },
+    "Redo",
+    {
+      "x": 2,
+      "w": 0.75,
+      "h": 0.75
+    },
+    "Redo",
+    {
+      "w": 0.75,
+      "h": 0.75
+    },
+    "Paste",
+    {
+      "x": 0.75,
+      "w": 0.75,
+      "h": 0.75
+    },
+    "Cut",
+    {
+      "c": "#bbbbbb",
+      "w": 0.75,
+      "h": 0.75
+    },
+    "Undo"
+  ],
+  [
+    {
+      "y": -0.9900000000000002,
+      "x": 7.25,
+      "c": "#cccccc",
+      "a": 5,
+      "w": 0.75,
+      "h": 0.75
+    },
+    "<\n\n\n\n\n\n,",
+    {
+      "x": 9.25,
+      "a": 7,
+      "w": 0.75,
+      "h": 0.75
+    },
+    "Copy"
+  ],
+  [
+    {
+      "y": -0.009999999999999787,
+      "x": 2.25,
+      "w": 0.75,
+      "h": 0.75
+    },
+    "Esc\n\n\n\nSys",
+    {
+      "w": 0.75,
+      "h": 0.75
+    },
+    "Spc\n\n\n\nNav",
+    {
+      "w": 0.75,
+      "h": 0.75
+    },
+    "<i class='kb kb-Tab-1'></i>\n\n\n\nMou",
+    {
+      "x": 0.5,
+      "w": 0.75,
+      "h": 0.75
+    },
+    "<i class='kb kb-Return-2'></i>\n\n\n\nSym",
+    {
+      "w": 0.75,
+      "h": 0.75
+    },
+    "<i class='kb kb-Unicode-BackSpace-DeleteLeft-Big'></i>\n\n\n\nNum",
+    {
+      "w": 0.75,
+      "h": 0.75
+    },
+    "<i class='kb kb-Unicode-DeleteRight-Big'></i>\n\n\n\nFun",
+    {
+      "x": 5,
+      "w": 0.75,
+      "h": 0.75
+    },
+    "Middl",
+    {
+      "w": 0.75,
+      "h": 0.75
+    },
+    "Left",
+    {
+      "w": 0.75,
+      "h": 0.75
+    },
+    "Right",
+    {
+      "x": 0.5,
+      "w": 0.75,
+      "h": 0.75
+    },
+    "Right",
+    {
+      "w": 0.75,
+      "h": 0.75
+    },
+    "Left",
+    {
+      "w": 0.75,
+      "h": 0.75
+    },
+    "Middl"
+  ],
+  [
+    {
+      "t": "#108896",
+      "w": 0.75,
+      "h": 0.75
+    },
+    "Boot<sup>2</sup>",
+    {
+      "w": 0.75,
+      "h": 0.75
+    },
+    "Tap<sup>2</sup>",
+    {
+      "w": 0.75,
+      "h": 0.75
+    },
+    "Extra<sup>2</sup>",
+    {
+      "w": 0.75,
+      "h": 0.75
+    },
+    "Base<sup>2</sup>",
+    {
+      "w": 0.75,
+      "h": 0.75
+    },
+    "",
+    {
+      "t": "#000000",
+      "a": 5,
+      "f": 3,
+      "fa": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        1
+      ],
+      "w": 2,
+      "h": 2.25,
+      "d": true
+    },
+    "<b>Nav Layer</b>\n\n\n\n\n\nNavigation and editing. Thumb keys dupicated from base layer with <u>auto-repeat</u> enabled.<br> Shift + Caps Word = Caps Lock",
+    {
+      "t": "#108896",
+      "a": 7,
+      "f": 1,
+      "w": 0.75,
+      "h": 0.75
+    },
+    "Redo",
+    {
+      "w": 0.75,
+      "h": 0.75
+    },
+    "Paste",
+    {
+      "x": 0.75,
+      "w": 0.75,
+      "h": 0.75
+    },
+    "Cut",
+    {
+      "w": 0.75,
+      "h": 0.75
+    },
+    "Undo",
+    {
+      "x": 0.5,
+      "t": "#142fb7\n#142fb7\n\n\n\n\n#142fb7",
+      "a": 5,
+      "w": 0.75,
+      "h": 0.75
+    },
+    "{\n[",
+    {
+      "w": 0.75,
+      "h": 0.75
+    },
+    "&\n7",
+    {
+      "w": 0.75,
+      "h": 0.75
+    },
+    "*\n8",
+    {
+      "w": 0.75,
+      "h": 0.75
+    },
+    "(\n9",
+    {
+      "w": 0.75,
+      "h": 0.75
+    },
+    "}\n]",
+    {
+      "t": "#000000",
+      "f": 3,
+      "fa": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        1
+      ],
+      "w": 2,
+      "h": 2.25,
+      "d": true
+    },
+    "<b>Num Layer</b>\n\n\n\n\n\nNumerals are in the numpad locations with additional symbols. Dot is duplicated from the base layer. <u>Auto Shift</u> is enabled for numbers and symbols.",
+    {
+      "t": "#142fb7",
+      "a": 7,
+      "f": 1,
+      "w": 0.75,
+      "h": 0.75
+    },
+    "",
+    {
+      "w": 0.75,
+      "h": 0.75
+    },
+    "Base<sup>2</sup>",
+    {
+      "x": 0.75,
+      "w": 0.75,
+      "h": 0.75
+    },
+    "Tap<sup>2</sup>",
+    {
+      "w": 0.75,
+      "h": 0.75
+    },
+    "Boot<sup>2</sup>"
+  ],
+  [
+    {
+      "y": -0.9900000000000002,
+      "x": 7.25,
+      "t": "#108896",
+      "w": 0.75,
+      "h": 0.75
+    },
+    "Copy",
+    {
+      "x": 9.25,
+      "t": "#142fb7",
+      "w": 0.75,
+      "h": 0.75
+    },
+    "Extra<sup>2</sup>"
+  ],
+  [
+    {
+      "y": -0.2599999999999998,
+      "t": "#108896",
+      "w": 0.75,
+      "h": 0.75
+    },
+    "Super",
+    {
+      "w": 0.75,
+      "h": 0.75
+    },
+    "Alt",
+    {
+      "w": 0.75,
+      "h": 0.75
+    },
+    "Ctrl",
+    {
+      "w": 0.75,
+      "h": 0.75
+    },
+    "Shift",
+    {
+      "w": 0.75,
+      "h": 0.75
+    },
+    "",
+    {
+      "x": 2,
+      "t": "#000000\n#108896\n#108896\n\n\n\n\n\n\n#108896",
+      "a": 4,
+      "w": 0.75,
+      "h": 0.75
+    },
+    "\nCaps<br>Wrd\n<i class='fa fa-lock'></i>",
+    {
+      "t": "#108896",
+      "a": 7,
+      "w": 0.75,
+      "h": 0.75
+    },
+    "<i class='fa fa-caret-left'></i>",
+    {
+      "x": 0.75,
+      "w": 0.75,
+      "h": 0.75
+    },
+    "<i class='fa fa-caret-up'></i>",
+    {
+      "w": 0.75,
+      "h": 0.75
+    },
+    "<i class='fa fa-caret-right'></i>",
+    {
+      "x": 0.5,
+      "t": "#142fb7\n#142fb7\n\n\n\n\n#142fb7",
+      "a": 5,
+      "w": 0.75,
+      "h": 0.75
+    },
+    ":\n;",
+    {
+      "w": 0.75,
+      "h": 0.75
+    },
+    "$\n4",
+    {
+      "w": 0.75,
+      "h": 0.75
+    },
+    "%\n5",
+    {
+      "w": 0.75,
+      "h": 0.75
+    },
+    "^\n6",
+    {
+      "w": 0.75,
+      "h": 0.75
+    },
+    "+\n=",
+    {
+      "x": 2,
+      "t": "#142fb7",
+      "a": 7,
+      "w": 0.75,
+      "h": 0.75
+    },
+    "",
+    {
+      "w": 0.75,
+      "h": 0.75
+    },
+    "Shift",
+    {
+      "x": 0.75,
+      "w": 0.75,
+      "h": 0.75
+    },
+    "Alt",
+    {
+      "w": 0.75,
+      "h": 0.75
+    },
+    "Super"
+  ],
+  [
+    {
+      "y": -0.9900000000000002,
+      "x": 7.25,
+      "t": "#108896",
+      "w": 0.75,
+      "h": 0.75
+    },
+    "<i class='fa fa-caret-down'></i>",
+    {
+      "x": 9.25,
+      "t": "#142fb7",
+      "w": 0.75,
+      "h": 0.75
+    },
+    "Ctrl"
+  ],
+  [
+    {
+      "y": -0.2599999999999998,
+      "t": "#108896",
+      "w": 0.75,
+      "h": 0.75
+    },
+    "",
+    {
+      "w": 0.75,
+      "h": 0.75
+    },
+    "AltGr",
+    {
+      "w": 0.75,
+      "h": 0.75
+    },
+    "Opp<sup>2</sup>",
+    {
+      "w": 0.75,
+      "h": 0.75
+    },
+    "Cur<sup>2</sup>",
+    {
+      "w": 0.75,
+      "h": 0.75
+    },
+    "",
+    {
+      "x": 2,
+      "w": 0.75,
+      "h": 0.75
+    },
+    "Insrt",
+    {
+      "w": 0.75,
+      "h": 0.75
+    },
+    "Home",
+    {
+      "x": 0.75,
+      "w": 0.75,
+      "h": 0.75
+    },
+    "PgUp",
+    {
+      "w": 0.75,
+      "h": 0.75
+    },
+    "End",
+    {
+      "x": 0.5,
+      "t": "#142fb7\n#142fb7\n\n\n\n\n#142fb7",
+      "a": 5,
+      "w": 0.75,
+      "h": 0.75
+    },
+    "~\n`",
+    {
+      "w": 0.75,
+      "h": 0.75
+    },
+    "!\n1",
+    {
+      "w": 0.75,
+      "h": 0.75
+    },
+    "@\n2",
+    {
+      "w": 0.75,
+      "h": 0.75
+    },
+    "#\n3",
+    {
+      "w": 0.75,
+      "h": 0.75
+    },
+    "|\n\\",
+    {
+      "x": 2,
+      "t": "#142fb7",
+      "a": 7,
+      "w": 0.75,
+      "h": 0.75
+    },
+    "",
+    {
+      "w": 0.75,
+      "h": 0.75
+    },
+    "Cur<sup>2</sup>",
+    {
+      "x": 0.75,
+      "w": 0.75,
+      "h": 0.75
+    },
+    "AltGr",
+    {
+      "w": 0.75,
+      "h": 0.75
+    },
+    ""
+  ],
+  [
+    {
+      "y": -0.9900000000000002,
+      "x": 7.25,
+      "t": "#108896",
+      "w": 0.75,
+      "h": 0.75
+    },
+    "PgDn",
+    {
+      "x": 9.25,
+      "t": "#142fb7",
+      "w": 0.75,
+      "h": 0.75
+    },
+    "Opp<sup>2</sup>"
+  ],
+  [
+    {
+      "y": -0.009999999999999787,
+      "x": 2.25,
+      "t": "#108896",
+      "w": 0.75,
+      "h": 0.75
+    },
+    "",
+    {
+      "g": true,
+      "w": 0.75,
+      "h": 0.75
+    },
+    "",
+    {
+      "g": false,
+      "w": 0.75,
+      "h": 0.75
+    },
+    "",
+    {
+      "x": 0.5,
+      "w": 0.75,
+      "h": 0.75
+    },
+    "<i class='kb kb-Return-2'></i>",
+    {
+      "w": 0.75,
+      "h": 0.75
+    },
+    "<i class='kb kb-Unicode-BackSpace-DeleteLeft-Big'></i>",
+    {
+      "w": 0.75,
+      "h": 0.75
+    },
+    "<i class='kb kb-Unicode-DeleteRight-Big'></i>",
+    {
+      "x": 5,
+      "t": "#142fb7\n#142fb7\n\n\n\n\n#142fb7",
+      "a": 5,
+      "w": 0.75,
+      "h": 0.75
+    },
+    ">\n.",
+    {
+      "w": 0.75,
+      "h": 0.75
+    },
+    ")\n0",
+    {
+      "w": 0.75,
+      "h": 0.75
+    },
+    "_\n-",
+    {
+      "x": 0.5,
+      "t": "#142fb7",
+      "a": 7,
+      "w": 0.75,
+      "h": 0.75
+    },
+    "",
+    {
+      "g": true,
+      "w": 0.75,
+      "h": 0.75
+    },
+    "",
+    {
+      "g": false,
+      "w": 0.75,
+      "h": 0.75
+    },
+    ""
+  ],
+  [
+    {
+      "t": "#e55b10",
+      "w": 0.75,
+      "h": 0.75
+    },
+    "Boot<sup>2</sup>",
+    {
+      "w": 0.75,
+      "h": 0.75
+    },
+    "Tap<sup>2</sup>",
+    {
+      "w": 0.75,
+      "h": 0.75
+    },
+    "Extra<sup>2</sup>",
+    {
+      "w": 0.75,
+      "h": 0.75
+    },
+    "Base<sup>2</sup>",
+    {
+      "w": 0.75,
+      "h": 0.75
+    },
+    "<i class='fa fa-mouse-pointer'></I><sub>2",
+    {
+      "t": "#000000",
+      "a": 5,
+      "f": 3,
+      "fa": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        1
+      ],
+      "w": 2,
+      "h": 2.25,
+      "d": true
+    },
+    "<b>Mouse Layer</b>\n\n\n\n\n\nMouse emulation on home row with scroll wheel below. Left inner column modifies mouse and wheel speed.",
+    {
+      "t": "#e55b10",
+      "a": 7,
+      "f": 1,
+      "w": 0.75,
+      "h": 0.75
+    },
+    "Redo",
+    {
+      "w": 0.75,
+      "h": 0.75
+    },
+    "Paste",
+    {
+      "x": 0.75,
+      "w": 0.75,
+      "h": 0.75
+    },
+    "Cut",
+    {
+      "w": 0.75,
+      "h": 0.75
+    },
+    "Undo",
+    {
+      "x": 0.5,
+      "t": "#1c9109",
+      "w": 0.75,
+      "h": 0.75
+    },
+    "{",
+    {
+      "w": 0.75,
+      "h": 0.75
+    },
+    "&",
+    {
+      "w": 0.75,
+      "h": 0.75
+    },
+    "*",
+    {
+      "w": 0.75,
+      "h": 0.75
+    },
+    "(",
+    {
+      "w": 0.75,
+      "h": 0.75
+    },
+    "}",
+    {
+      "t": "#000000",
+      "a": 5,
+      "f": 3,
+      "fa": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        1
+      ],
+      "w": 2,
+      "h": 2.25,
+      "d": true
+    },
+    "<b>Sym Layer</b>\n\n\n\n\n\nSymbols from Num Layer to reduce chording when used with mods. Dot is replaced by Open Parenthesis and Underscore is replaced by Em Dash.",
+    {
+      "t": "#1c9109",
+      "a": 7,
+      "f": 1,
+      "w": 0.75,
+      "h": 0.75
+    },
+    "",
+    {
+      "w": 0.75,
+      "h": 0.75
+    },
+    "Base<sup>2</sup>",
+    {
+      "x": 0.75,
+      "w": 0.75,
+      "h": 0.75
+    },
+    "Tap<sup>2</sup>",
+    {
+      "w": 0.75,
+      "h": 0.75
+    },
+    "Boot<sup>2</sup>"
+  ],
+  [
+    {
+      "y": -0.9900000000000002,
+      "x": 7.25,
+      "t": "#e55b10",
+      "w": 0.75,
+      "h": 0.75
+    },
+    "Copy",
+    {
+      "x": 9.25,
+      "t": "#1c9109",
+      "w": 0.75,
+      "h": 0.75
+    },
+    "Extra<sup>2</sup>"
+  ],
+  [
+    {
+      "y": -0.2599999999999998,
+      "t": "#e55b10",
+      "w": 0.75,
+      "h": 0.75
+    },
+    "Super",
+    {
+      "w": 0.75,
+      "h": 0.75
+    },
+    "Alt",
+    {
+      "w": 0.75,
+      "h": 0.75
+    },
+    "Ctrl",
+    {
+      "w": 0.75,
+      "h": 0.75
+    },
+    "Shift",
+    {
+      "w": 0.75,
+      "h": 0.75
+    },
+    "<i class='fa fa-mouse-pointer'></I><sub>1",
+    {
+      "x": 2,
+      "w": 0.75,
+      "h": 0.75
+    },
+    "",
+    {
+      "w": 0.75,
+      "h": 0.75
+    },
+    "<i class='fa fa-long-arrow-left'></i>",
+    {
+      "x": 0.75,
+      "w": 0.75,
+      "h": 0.75
+    },
+    "<i class='fa fa-long-arrow-up'></i>",
+    {
+      "w": 0.75,
+      "h": 0.75
+    },
+    "<i class='fa fa-long-arrow-right'></i>",
+    {
+      "x": 0.5,
+      "t": "#1c9109",
+      "w": 0.75,
+      "h": 0.75
+    },
+    ":",
+    {
+      "w": 0.75,
+      "h": 0.75
+    },
+    "$",
+    {
+      "w": 0.75,
+      "h": 0.75
+    },
+    "%",
+    {
+      "w": 0.75,
+      "h": 0.75
+    },
+    "^",
+    {
+      "w": 0.75,
+      "h": 0.75
+    },
+    "+",
+    {
+      "x": 2,
+      "w": 0.75,
+      "h": 0.75
+    },
+    "",
+    {
+      "w": 0.75,
+      "h": 0.75
+    },
+    "Shift",
+    {
+      "x": 0.75,
+      "w": 0.75,
+      "h": 0.75
+    },
+    "Alt",
+    {
+      "w": 0.75,
+      "h": 0.75
+    },
+    "Super"
+  ],
+  [
+    {
+      "y": -0.9900000000000002,
+      "x": 7.25,
+      "t": "#e55b10",
+      "w": 0.75,
+      "h": 0.75
+    },
+    "<i class='fa fa-long-arrow-down'></i>",
+    {
+      "x": 9.25,
+      "t": "#1c9109",
+      "w": 0.75,
+      "h": 0.75
+    },
+    "Ctrl"
+  ],
+  [
+    {
+      "y": -0.2599999999999998,
+      "t": "#e55b10",
+      "w": 0.75,
+      "h": 0.75
+    },
+    "",
+    {
+      "w": 0.75,
+      "h": 0.75
+    },
+    "AltGr",
+    {
+      "w": 0.75,
+      "h": 0.75
+    },
+    "Opp<sup>2</sup>",
+    {
+      "w": 0.75,
+      "h": 0.75
+    },
+    "Cur<sup>2</sup>",
+    {
+      "w": 0.75,
+      "h": 0.75
+    },
+    "<i class='fa fa-mouse-pointer'></I><sub>0",
+    {
+      "x": 2,
+      "w": 0.75,
+      "h": 0.75
+    },
+    "",
+    {
+      "w": 0.75,
+      "h": 0.75
+    },
+    "<i class='fa fa-angle-double-left'></i>",
+    {
+      "x": 0.75,
+      "w": 0.75,
+      "h": 0.75
+    },
+    "<i class='fa fa-angle-double-up'></i>",
+    {
+      "w": 0.75,
+      "h": 0.75
+    },
+    "<i class='fa fa-angle-double-right'></i>",
+    {
+      "x": 0.5,
+      "t": "#1c9109",
+      "w": 0.75,
+      "h": 0.75
+    },
+    "~",
+    {
+      "w": 0.75,
+      "h": 0.75
+    },
+    "!",
+    {
+      "w": 0.75,
+      "h": 0.75
+    },
+    "@",
+    {
+      "w": 0.75,
+      "h": 0.75
+    },
+    "#",
+    {
+      "w": 0.75,
+      "h": 0.75
+    },
+    "|",
+    {
+      "x": 2,
+      "w": 0.75,
+      "h": 0.75
+    },
+    "",
+    {
+      "w": 0.75,
+      "h": 0.75
+    },
+    "Cur<sup>2</sup>",
+    {
+      "x": 0.75,
+      "w": 0.75,
+      "h": 0.75
+    },
+    "AltGr",
+    {
+      "w": 0.75,
+      "h": 0.75
+    },
+    ""
+  ],
+  [
+    {
+      "y": -0.9900000000000002,
+      "x": 7.25,
+      "t": "#e55b10",
+      "w": 0.75,
+      "h": 0.75
+    },
+    "<i class='fa fa-angle-double-down'></i>",
+    {
+      "x": 9.25,
+      "t": "#1c9109",
+      "w": 0.75,
+      "h": 0.75
+    },
+    "Opp<sup>2</sup>"
+  ],
+  [
+    {
+      "y": -0.009999999999999787,
+      "x": 2.25,
+      "t": "#e55b10",
+      "w": 0.75,
+      "h": 0.75
+    },
+    "",
+    {
+      "w": 0.75,
+      "h": 0.75
+    },
+    "",
+    {
+      "g": true,
+      "w": 0.75,
+      "h": 0.75
+    },
+    "",
+    {
+      "x": 0.5,
+      "g": false,
+      "w": 0.75,
+      "h": 0.75
+    },
+    "Right",
+    {
+      "w": 0.75,
+      "h": 0.75
+    },
+    "Left",
+    {
+      "w": 0.75,
+      "h": 0.75
+    },
+    "Middl",
+    {
+      "x": 5,
+      "t": "#1c9109",
+      "w": 0.75,
+      "h": 0.75
+    },
+    "(",
+    {
+      "w": 0.75,
+      "h": 0.75
+    },
+    ")",
+    {
+      "w": 0.75,
+      "h": 0.75
+    },
+    "—",
+    {
+      "x": 0.5,
+      "g": true,
+      "w": 0.75,
+      "h": 0.75
+    },
+    "",
+    {
+      "g": false,
+      "w": 0.75,
+      "h": 0.75
+    },
+    "",
+    {
+      "w": 0.75,
+      "h": 0.75
+    },
+    ""
+  ],
+  [
+    {
+      "t": "#bf16db",
+      "w": 0.75,
+      "h": 0.75
+    },
+    "Boot<sup>2</sup>",
+    {
+      "w": 0.75,
+      "h": 0.75
+    },
+    "Tap<sup>2</sup>",
+    {
+      "w": 0.75,
+      "h": 0.75
+    },
+    "Extra<sup>2</sup>",
+    {
+      "w": 0.75,
+      "h": 0.75
+    },
+    "Base<sup>2</sup>",
+    {
+      "w": 0.75,
+      "h": 0.75
+    },
+    "",
+    {
+      "t": "#000000",
+      "a": 5,
+      "f": 3,
+      "fa": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        1
+      ],
+      "w": 2,
+      "h": 2.25,
+      "d": true
+    },
+    "<b>Sys Layer</b>\n\n\n\n\n\nMedia, browser, and Excel shortcuts along with cross-platform search and Mac Mode toggle on double-tap.",
+    {
+      "t": "#bf16db",
+      "a": 7,
+      "f": 1,
+      "w": 0.75,
+      "h": 0.75
+    },
+    "+Wn",
+    {
+      "w": 0.75,
+      "h": 0.75
+    },
+    "Brwsr<br>Bck",
+    {
+      "x": 0.75,
+      "w": 0.75,
+      "h": 0.75
+    },
+    "Tab<br>Fwd",
+    {
+      "w": 0.75,
+      "h": 0.75
+    },
+    "Brwsr<br>Fwd",
+    {
+      "x": 0.5,
+      "t": "#b71446",
+      "w": 0.75,
+      "h": 0.75
+    },
+    "F12",
+    {
+      "w": 0.75,
+      "h": 0.75
+    },
+    "F7",
+    {
+      "w": 0.75,
+      "h": 0.75
+    },
+    "F8",
+    {
+      "w": 0.75,
+      "h": 0.75
+    },
+    "F9",
+    {
+      "t": "#000000\n#b71446\n#b71446\n\n\n\n\n\n\n#b71446",
+      "a": 4,
+      "w": 0.75,
+      "h": 0.75
+    },
+    "\nSnip\nPrtScn",
+    {
+      "t": "#000000",
+      "a": 5,
+      "f": 3,
+      "fa": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        1
+      ],
+      "w": 2,
+      "h": 2.25,
+      "d": true
+    },
+    "<b>Fun Layer</b>\n\n\n\n\n\nFunction keys mirror numerals with extras on the pinkie column and system keys on the inner column. App is on tertiary thumb key with the rest duplicated from the base layer to enable auto-repeat.",
+    {
+      "t": "#b71446",
+      "a": 7,
+      "f": 1,
+      "w": 0.75,
+      "h": 0.75
+    },
+    "",
+    {
+      "w": 0.75,
+      "h": 0.75
+    },
+    "Base<sup>2</sup>",
+    {
+      "x": 0.75,
+      "w": 0.75,
+      "h": 0.75
+    },
+    "Tap<sup>2</sup>",
+    {
+      "w": 0.75,
+      "h": 0.75
+    },
+    "Boot<sup>2</sup>"
+  ],
+  [
+    {
+      "y": -0.9899999999999984,
+      "x": 7.25,
+      "t": "#bf16db",
+      "w": 0.75,
+      "h": 0.75
+    },
+    "Tab<br>Bck",
+    {
+      "x": 9.25,
+      "t": "#b71446",
+      "w": 0.75,
+      "h": 0.75
+    },
+    "Extra<sup>2</sup>"
+  ],
+  [
+    {
+      "y": -0.26000000000000156,
+      "t": "#bf16db",
+      "w": 0.75,
+      "h": 0.75
+    },
+    "Super",
+    {
+      "w": 0.75,
+      "h": 0.75
+    },
+    "Alt",
+    {
+      "w": 0.75,
+      "h": 0.75
+    },
+    "Ctrl",
+    {
+      "w": 0.75,
+      "h": 0.75
+    },
+    "Shift",
+    {
+      "w": 0.75,
+      "h": 0.75
+    },
+    "",
+    {
+      "x": 2,
+      "w": 0.75,
+      "h": 0.75
+    },
+    "<i class='fa fa-search'></i>",
+    {
+      "w": 0.75,
+      "h": 0.75
+    },
+    "<i class='fa fa-fast-backward'></i>",
+    {
+      "x": 0.75,
+      "w": 0.75,
+      "h": 0.75
+    },
+    "<i class='kb kb-Multimedia-Volume-Up-2'></i>",
+    {
+      "w": 0.75,
+      "h": 0.75
+    },
+    "<i class='fa fa-fast-forward'></i>",
+    {
+      "x": 0.5,
+      "t": "#b71446",
+      "w": 0.75,
+      "h": 0.75
+    },
+    "F11",
+    {
+      "w": 0.75,
+      "h": 0.75
+    },
+    "F4",
+    {
+      "w": 0.75,
+      "h": 0.75
+    },
+    "F5",
+    {
+      "w": 0.75,
+      "h": 0.75
+    },
+    "F6",
+    {
+      "w": 0.75,
+      "h": 0.75
+    },
+    "Scroll<br>Lock",
+    {
+      "x": 2,
+      "w": 0.75,
+      "h": 0.75
+    },
+    "",
+    {
+      "w": 0.75,
+      "h": 0.75
+    },
+    "Shift",
+    {
+      "x": 0.75,
+      "w": 0.75,
+      "h": 0.75
+    },
+    "Alt",
+    {
+      "w": 0.75,
+      "h": 0.75
+    },
+    "Super"
+  ],
+  [
+    {
+      "y": -0.9899999999999984,
+      "x": 7.25,
+      "t": "#bf16db",
+      "w": 0.75,
+      "h": 0.75
+    },
+    "<i class='kb kb-Multimedia-Volume-Down-1'></i>",
+    {
+      "x": 9.25,
+      "t": "#b71446",
+      "w": 0.75,
+      "h": 0.75
+    },
+    "Ctrl"
+  ],
+  [
+    {
+      "y": -0.26000000000000156,
+      "t": "#bf16db",
+      "w": 0.75,
+      "h": 0.75
+    },
+    "Win<sup>2</sup>",
+    {
+      "w": 0.75,
+      "h": 0.75
+    },
+    "AltGr",
+    {
+      "w": 0.75,
+      "h": 0.75
+    },
+    "Opp<sup>2</sup>",
+    {
+      "w": 0.75,
+      "h": 0.75
+    },
+    "Cur<sup>2</sup>",
+    {
+      "w": 0.75,
+      "h": 0.75
+    },
+    "Mac<sup>2</sup>",
+    {
+      "x": 2,
+      "w": 0.75,
+      "h": 0.75
+    },
+    "Frz",
+    {
+      "w": 0.75,
+      "h": 0.75
+    },
+    "<i class='fa fa-outdent'></i>",
+    {
+      "x": 0.75,
+      "w": 0.75,
+      "h": 0.75
+    },
+    "0.00",
+    {
+      "w": 0.75,
+      "h": 0.75
+    },
+    "<i class='fa fa-indent'></i>",
+    {
+      "x": 0.5,
+      "t": "#b71446",
+      "w": 0.75,
+      "h": 0.75
+    },
+    "F10",
+    {
+      "w": 0.75,
+      "h": 0.75
+    },
+    "F1",
+    {
+      "w": 0.75,
+      "h": 0.75
+    },
+    "F2",
+    {
+      "w": 0.75,
+      "h": 0.75
+    },
+    "F3",
+    {
+      "w": 0.75,
+      "h": 0.75
+    },
+    "Pause<br>Break",
+    {
+      "x": 2,
+      "w": 0.75,
+      "h": 0.75
+    },
+    "",
+    {
+      "w": 0.75,
+      "h": 0.75
+    },
+    "Cur<sup>2</sup>",
+    {
+      "x": 0.75,
+      "w": 0.75,
+      "h": 0.75
+    },
+    "AltGr",
+    {
+      "w": 0.75,
+      "h": 0.75
+    },
+    ""
+  ],
+  [
+    {
+      "y": -0.9899999999999984,
+      "x": 7.25,
+      "t": "#bf16db",
+      "w": 0.75,
+      "h": 0.75
+    },
+    "0.0",
+    {
+      "x": 9.25,
+      "t": "#b71446",
+      "w": 0.75,
+      "h": 0.75
+    },
+    "Opp<sup>2</sup>"
+  ],
+  [
+    {
+      "y": -0.010000000000001563,
+      "x": 2.25,
+      "t": "#bf16db",
+      "g": true,
+      "w": 0.75,
+      "h": 0.75
+    },
+    "",
+    {
+      "g": false,
+      "w": 0.75,
+      "h": 0.75
+    },
+    "",
+    {
+      "w": 0.75,
+      "h": 0.75
+    },
+    "",
+    {
+      "x": 0.5,
+      "w": 0.75,
+      "h": 0.75
+    },
+    "<i class='kb kb-Multimedia-Stop'></i>",
+    {
+      "w": 0.75,
+      "h": 0.75
+    },
+    "<i class='kb kb-Multimedia-Play-Pause'></i>",
+    {
+      "w": 0.75,
+      "h": 0.75
+    },
+    "<i class='kb kb-Multimedia-Mute-2'></i>",
+    {
+      "x": 5,
+      "t": "#b71446",
+      "w": 0.75,
+      "h": 0.75
+    },
+    "<i class='fa fa-bars'></i>",
+    {
+      "w": 0.75,
+      "h": 0.75
+    },
+    "Spc",
+    {
+      "w": 0.75,
+      "h": 0.75
+    },
+    "<i class='kb kb-Tab-1'></i>",
+    {
+      "x": 0.5,
+      "w": 0.75,
+      "h": 0.75
+    },
+    "",
+    {
+      "w": 0.75,
+      "h": 0.75
+    },
+    "",
+    {
+      "g": true,
+      "w": 0.75,
+      "h": 0.75
+    },
+    ""
+  ]
+]
